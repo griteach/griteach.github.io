@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-01T00:39:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name></author><entry><title type="html">마크다운 익히기 #1</title><link href="http://localhost:4000/til/markdown-1/" rel="alternate" type="text/html" title="마크다운 익히기 #1" /><published>2022-09-01T00:00:00+09:00</published><updated>2022-09-01T00:00:00+09:00</updated><id>http://localhost:4000/til/markdown-1</id><content type="html" xml:base="http://localhost:4000/til/markdown-1/"><![CDATA[<h1 id="마크다운-정리">마크다운 정리</h1>
+I"{<h1 id="마크다운-정리">마크다운 정리</h1>
 
 <blockquote>
   <p>제목은 #1 ~ #6까지 사용한다.</p>
@@ -18,4 +18,5 @@
   <span class="o">&lt;</span><span class="sr">/React.StrictMode</span><span class="err">&gt;
 </span><span class="p">);</span>
 </code></pre></div></div>
-<p>위의 코드 입력 때문에 다 갈아엎기로 했다. 참. 비효율적이야.</p>]]></content><author><name>griteach</name></author><category term="TIL" /><category term="markdown" /><summary type="html"><![CDATA[마크다운 정리]]></summary></entry></feed>
+<p>위의 코드 입력 때문에 다 갈아엎기로 했다. 참. 비효율적이야.</p>
+:ET
