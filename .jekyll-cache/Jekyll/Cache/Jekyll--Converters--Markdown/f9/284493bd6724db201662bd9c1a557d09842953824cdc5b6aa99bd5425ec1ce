@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-01T22:37:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">마크다운 익히기 #1</title><link href="http://localhost:4000/til/markdown-1/" rel="alternate" type="text/html" title="마크다운 익히기 #1" /><published>2022-09-01T00:00:00+09:00</published><updated>2022-09-01T00:00:00+09:00</updated><id>http://localhost:4000/til/markdown-1</id><content type="html" xml:base="http://localhost:4000/til/markdown-1/"><![CDATA[<h1 id="notice">NOTICE</h1>
+I"h<h1 id="notice">NOTICE</h1>
 
 <p class="notice"><strong>🔅 Notice:</strong><br />
 기본적인 노티스</p>
@@ -142,4 +142,6 @@ __double underscores__
 <blockquote>
   <p>Markdown을 사용한 Post 작성 가이드 : <a href="https://niklasjang.github.io/guide/how-to-use-markdown/#notice">NiklasJang’s Blog</a>
 YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_components">Wikipedia - YAML</a></p>
-</blockquote>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="TIL" /><category term="markdown" /><summary type="html"><![CDATA[NOTICE]]></summary></entry></feed>
+</blockquote>
+
+:ET

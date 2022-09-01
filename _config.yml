@@ -25,10 +25,12 @@ url                      : "https://griteach.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "griteach/griteach.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/griteach_logo_circle.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
+date_format: "%Y-%m-%d"
+
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -59,11 +61,11 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
+search                   : true
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
-  search_within_pages    : # true, false (default)
+  search_within_pages    : true
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -291,6 +293,12 @@ defaults:
       comments: # true
       share: true
       related: true
+      show_date: true
+      toc: true
+      toc_label: "차례"
+      toc_icon: "square"
+      toc_sticky: true
+      
 
   # _pages
   - scope:
