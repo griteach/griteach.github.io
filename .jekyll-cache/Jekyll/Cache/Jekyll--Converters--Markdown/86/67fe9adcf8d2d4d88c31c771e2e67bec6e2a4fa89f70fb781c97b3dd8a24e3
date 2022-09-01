@@ -1,0 +1,45 @@
+I"<h1 id="notice">NOTICE</h1>
+
+<p class="notice"><strong>🔅 Notice:</strong><br />
+기본적인 노티스</p>
+
+<p class="notice--primary"><strong>⚡️ Primary:</strong><br />
+중요한 노티스</p>
+
+<p class="notice--info"><strong>🚦 Info:</strong><br />
+정보 노티스</p>
+
+<p class="notice--warning"><strong>⛔️ Warning:</strong><br />
+경고 노티스</p>
+
+<p class="notice--danger"><strong>❌ Danger:</strong><br />
+Danger 노티스</p>
+
+<p class="notice--success"><strong>✅ Success:</strong><br />
+Success 노티스</p>
+
+<p>하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. <code class="language-plaintext highlighter-rouge">{: .notice--&lt;primary | info | warning | danger | success &gt;}</code> 와 같이 알맞게 입력해 주자.</p>
+
+<p class="notice--info"><strong>개행 방법:</strong>
+개행을 원하는 위치에서 스페이스(공백) 두 번 !</p>
+
+<blockquote>
+  <p>제목은 #1 ~ #6까지 사용한다.</p>
+</blockquote>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom/client</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
+
+
+<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span> <span class="k">as</span> <span class="nx">HTMLElement</span>
+<span class="p">);</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/React.StrictMode</span><span class="err">&gt;
+</span><span class="p">);</span>
+</code></pre></div></div>
+<p>위의 코드 입력 때문에 다 갈아엎기로 했다. 참. 비효율적이야.</p>
+:ET

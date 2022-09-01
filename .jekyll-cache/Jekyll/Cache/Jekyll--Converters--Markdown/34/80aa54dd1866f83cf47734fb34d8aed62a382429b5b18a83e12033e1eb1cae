@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-01T16:02:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">마크다운 익히기 #1</title><link href="http://localhost:4000/til/markdown-1/" rel="alternate" type="text/html" title="마크다운 익히기 #1" /><published>2022-09-01T00:00:00+09:00</published><updated>2022-09-01T00:00:00+09:00</updated><id>http://localhost:4000/til/markdown-1</id><content type="html" xml:base="http://localhost:4000/til/markdown-1/"><![CDATA[<h1 id="notice">NOTICE</h1>
+I"]<h1 id="notice">NOTICE</h1>
 
 <p class="notice"><strong>🔅 Notice:</strong><br />
 기본적인 노티스</p>
@@ -18,10 +18,9 @@ Danger 노티스</p>
 <p class="notice--success"><strong>✅ Success:</strong><br />
 Success 노티스</p>
 
-<p>하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다.</p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .notice--<span class="nt">&lt;primary</span> <span class="err">|</span> <span class="na">info</span> <span class="err">|</span> <span class="na">warning</span> <span class="err">|</span> <span class="na">danger</span> <span class="err">|</span> <span class="na">success</span> <span class="nt">&gt;</span>}
-</code></pre></div></div>
-<p>위와 같이 알맞게 입력해 주자.</p>
+<p>하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다.
+<code class="language-plaintext highlighter-rouge">{: .notice--&lt;primary | info | warning | danger | success &gt;}</code>
+위와 같이 알맞게 입력해 주자.</p>
 
 <p class="notice--info"><strong>개행 방법:</strong>
 개행을 원하는 위치에서 스페이스(공백) 두 번 + 엔터입력<br />
@@ -49,8 +48,6 @@ toc_sticky: true
 classes: wide
 ---
 </code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">title</code>: 문서의 전체 제목을 나타냄.
-<code class="language-plaintext highlighter-rouge">excerpt</code>: 문서를 간략하게 요약한 내용. 블로그 제목 아래에 보여줌.</p>
 
 <h1 id="code-block">Code block</h1>
 <p>이것 때문에 블로그 다시 만들게 되었음. 아주 사소한 생각에서 시작된 뻘짓은 이렇게 많은 공수를 필요로 하고… 그 덕에 블로그도 만들어보게 되었음. 역시 일단 해봐야 돼.</p>
@@ -74,4 +71,5 @@ classes: wide
 
 <blockquote>
   <p>Markdown을 사용한 Post 작성 가이드 : <a href="https://niklasjang.github.io/guide/how-to-use-markdown/#notice">NiklasJang’s Blog</a></p>
-</blockquote>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="TIL" /><category term="markdown" /><summary type="html"><![CDATA[NOTICE]]></summary></entry></feed>
+</blockquote>
+:ET
