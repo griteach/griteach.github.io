@@ -11,11 +11,20 @@ var store = [{
         "url": "/goal/life/",
         "teaser": null
       },{
+        "title": "React basic",
+        "excerpt":"Router 원하는 곳에 뿌려주는 용도. 기본 구성 방법 Link Link: 원하는 곳에 정보를 보낼 수 있다. Components return의 활용 //배열에 대한 map을 활용하여 반복된 리스트 출력해주기. //여기에서는 Coin 컴포넌트를 map으로 호출하여 반복 출력해주고 있다. &lt;Container&gt; &lt;Header&gt; &lt;Title&gt;Coins&lt;/Title&gt; &lt;/Header&gt; {loading? &lt;Loader&gt;Loading...&lt;/Loader&gt; : &lt;CoinsList&gt; {coins.map(coin =&gt; &lt;Coin key={coin.id}&gt; &lt;Link to={`/${coin.id}`}&gt; &lt;CoinWrapper&gt; &lt;Img...","categories": ["React"],
+        "tags": ["React","develop","study"],
+        "url": "/react/react-study/",
+        "teaser": null
+      },{
     "title": "마크다운 #1",
     "excerpt":"NOTICE 🔅 Notice: 기본적인 노티스 ⚡️ Primary: 중요한 노티스 🚦 Info: 정보 노티스 ⛔️ Warning: 경고 노티스 ❌ Danger: Danger 노티스 ✅ Success: Success 노티스 하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. {: .notice--&lt;primary | info | warning | danger | success &gt;}...","url": "http://localhost:4000/_posts/2022-09-01-markdown-1/"
   },{
     "title": "목표",
     "excerpt":"2022 목표 리액트 익히기 노마드코더 리액트 마스터 과정 마무리 코인트래커 트렐로 클론 넷플릭스 클론 노마드코더 무료 강좌 전체 마무리 트위터 클론 코딩 Next JS 시작하기 줌 클론코딩 실전형 리액트 Hooks 10개 Nest JS로 API만들기 초보자를 위한 리덕스 101 GraphQL로 영화 API 만들기 ‘지금 우리 학교는’ 리액트로 재탄생시키기 Node JS Express...","url": "http://localhost:4000/_posts/2022-09-02-life/"
+  },{
+    "title": "React basic",
+    "excerpt":"Router 원하는 곳에 뿌려주는 용도. 기본 구성 방법 Link Link: 원하는 곳에 정보를 보낼 수 있다. Components return의 활용 //배열에 대한 map을 활용하여 반복된 리스트 출력해주기. //여기에서는 Coin 컴포넌트를 map으로 호출하여 반복 출력해주고 있다. &lt;Container&gt; &lt;Header&gt; &lt;Title&gt;Coins&lt;/Title&gt; &lt;/Header&gt; {loading? &lt;Loader&gt;Loading...&lt;/Loader&gt; : &lt;CoinsList&gt; {coins.map(coin =&gt; &lt;Coin key={coin.id}&gt; &lt;Link to={`/${coin.id}`}&gt; &lt;CoinWrapper&gt; &lt;Img...","url": "http://localhost:4000/_posts/2022-09-02-react-study/"
   },{
     "title": "About",
     "excerpt":"  ","url": "http://localhost:4000/about/"

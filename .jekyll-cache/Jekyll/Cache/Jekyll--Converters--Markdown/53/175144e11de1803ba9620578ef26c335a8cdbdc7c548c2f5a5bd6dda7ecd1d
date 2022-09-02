@@ -1,0 +1,180 @@
+I"�C<h1 id="router">Router</h1>
+
+<ol>
+  <li>원하는 곳에 뿌려주는 용도.</li>
+  <li>기본 구성 방법</li>
+</ol>
+
+<h2 id="link">Link</h2>
+
+<p class="notice--info"><strong>Link:</strong>
+원하는 곳에 정보를 보낼 수 있다.</p>
+
+<h1 id="components">Components</h1>
+
+<h2 id="return의-활용">return의 활용</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">//배열에 대한 map을 활용하여 반복된 리스트 출력해주기.</span>
+<span class="c1">//여기에서는 Coin 컴포넌트를 map으로 호출하여 반복 출력해주고 있다.</span>
+<span class="o">&lt;</span><span class="nx">Container</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Header</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Title</span><span class="o">&gt;</span><span class="nx">Coins</span><span class="o">&lt;</span><span class="sr">/Title</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/Header</span><span class="err">&gt;
+</span>        <span class="p">{</span><span class="nx">loading</span><span class="p">?</span> <span class="o">&lt;</span><span class="nx">Loader</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/Loader&gt; : &lt;CoinsList</span><span class="err">&gt;
+</span>            <span class="p">{</span><span class="nx">coins</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">coin</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">Coin</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">CoinWrapper</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="nx">Img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">`https://cryptocurrencyliveprices.com/img/</span><span class="p">${</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">.png`</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
+</span>                        <span class="p">{</span><span class="nx">coin</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="o">&amp;</span><span class="nx">rarr</span><span class="p">;</span>
+                    <span class="o">&lt;</span><span class="sr">/CoinWrapper&gt;       </span><span class="err"> 
+</span>                <span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>                    
+                <span class="o">&lt;</span><span class="sr">/Coin&gt;</span><span class="se">)</span><span class="err">}
+</span>        <span class="o">&lt;</span><span class="sr">/CoinsList&gt;</span><span class="err">}
+</span>        
+    <span class="o">&lt;</span><span class="sr">/Container</span><span class="err">&gt;
+</span>
+</code></pre></div></div>
+
+<h1 id="style">Style</h1>
+
+<h2 id="reset-css">reset css</h2>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/</span>
+
+<span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">applet</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span>
+<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span>
+<span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">big</span><span class="o">,</span> <span class="nt">cite</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span>
+<span class="nt">del</span><span class="o">,</span> <span class="nt">dfn</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">img</span><span class="o">,</span> <span class="nt">ins</span><span class="o">,</span> <span class="nt">kbd</span><span class="o">,</span> <span class="nt">q</span><span class="o">,</span> <span class="nt">s</span><span class="o">,</span> <span class="nt">samp</span><span class="o">,</span>
+<span class="nt">small</span><span class="o">,</span> <span class="nt">strike</span><span class="o">,</span> <span class="nt">strong</span><span class="o">,</span> <span class="nt">sub</span><span class="o">,</span> <span class="nt">sup</span><span class="o">,</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">var</span><span class="o">,</span>
+<span class="nt">b</span><span class="o">,</span> <span class="nt">u</span><span class="o">,</span> <span class="nt">i</span><span class="o">,</span> <span class="nt">center</span><span class="o">,</span>
+<span class="nt">dl</span><span class="o">,</span> <span class="nt">dt</span><span class="o">,</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span>
+<span class="nt">fieldset</span><span class="o">,</span> <span class="nt">form</span><span class="o">,</span> <span class="nt">label</span><span class="o">,</span> <span class="nt">legend</span><span class="o">,</span>
+<span class="nt">table</span><span class="o">,</span> <span class="nt">caption</span><span class="o">,</span> <span class="nt">tbody</span><span class="o">,</span> <span class="nt">tfoot</span><span class="o">,</span> <span class="nt">thead</span><span class="o">,</span> <span class="nt">tr</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span><span class="o">,</span>
+<span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">canvas</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span> 
+<span class="nt">figure</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> 
+<span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">output</span><span class="o">,</span> <span class="nt">ruby</span><span class="o">,</span> <span class="nt">section</span><span class="o">,</span> <span class="nt">summary</span><span class="o">,</span>
+<span class="nt">time</span><span class="o">,</span> <span class="nt">mark</span><span class="o">,</span> <span class="nt">audio</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>
+	<span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+	<span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+	<span class="nl">font-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+	<span class="nl">font</span><span class="p">:</span> <span class="nb">inherit</span><span class="p">;</span>
+	<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">baseline</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* HTML5 display-role reset for older browsers */</span>
+<span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">figure</span><span class="o">,</span> 
+<span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> <span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span>
+	<span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span> <span class="p">{</span>
+	<span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">blockquote</span><span class="o">,</span> <span class="nt">q</span> <span class="p">{</span>
+	<span class="nl">quotes</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">blockquote</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">blockquote</span><span class="nd">:after</span><span class="o">,</span>
+<span class="nt">q</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">q</span><span class="nd">:after</span> <span class="p">{</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+	<span class="nl">content</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">table</span> <span class="p">{</span>
+	<span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">collapse</span><span class="p">;</span>
+	<span class="nl">border-spacing</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="styled-components">styled-components</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Header</span>
+<span class="kd">const</span> <span class="nx">Header</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`</span><span class="p">;</span>
+
+<span class="c1">//Coin List</span>
+<span class="kd">const</span> <span class="nx">Coin</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">li</span><span class="s2">`
+    background-color: white;
+    color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">}</span><span class="s2">;
+    
+    border-radius: 20px;
+    margin-bottom: 15px;
+    a{
+        padding: 20px;
+        transition: color 0.2s ease-in;
+        display: block;
+    }
+    &amp;:hover{
+        a{
+            color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">accentColor</span><span class="p">}</span><span class="s2">;
+        }
+    }
+`</span><span class="p">;</span>
+</code></pre></div></div>
+<p>컴포넌트마다 따로 스타일을 지정해 줄 수 있다. 이렇게 지정해 둔 스타일은 컴포넌트를 불러올 때마다 적용되기 때문에 리액트가 추구하는 방식에 참 어울린다는 생각이.. 기존 css에서 사용하던 모든 방식을 styled-components로도 대부분 사용할 수 있다.</p>
+
+<h3 id="createglobalstyle">createGlobalStyle</h3>
+
+<blockquote>
+  <p>스타일을 전체 적용할 때, 어디에서 작업을 해야 할까? styled-components들은 각자의 컴포넌트에 대한 스타일을 적용할 수도 있지만, 전체에 대한 것도 마련해 두었다.</p>
+</blockquote>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">createGlobalStyle</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이 컴포넌트는 렌더링 한 후에 전역 스코프에 스타일을 올려준다. 단독으로 적용되는 것이 아니라 전체, 글로벌로 적용.</p>
+
+<h3 id="styled-reset">styled-reset</h3>
+<ol>
+  <li>한 번에 reset css 시켜줌.</li>
+</ol>
+
+<h1 id="hooks">Hooks</h1>
+
+<h2 id="useparams">useParams</h2>
+
+<ol>
+  <li>현재 url에서 관심있는 정보를 잡아낼 수 있게 해주는 것.</li>
+</ol>
+
+<h2 id="usestate">useState</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//basic</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">loading</span><span class="p">,</span> <span class="nx">setLoading</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">name</span><span class="p">,</span> <span class="nx">setName</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">();</span>
+
+<span class="c1">//with interface</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">coins</span><span class="p">,</span> <span class="nx">setCoins</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="o">&lt;</span><span class="nx">CoinInterface</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+</code></pre></div></div>
+
+<ol>
+  <li>state 변수</li>
+  <li>값을 변경 및 저장하면서 새롭게 rendering</li>
+  <li>기본값 세팅가능.</li>
+</ol>
+
+<h2 id="uselocation">useLocation</h2>
+
+<p>현재 페이지에 들어오는 데이터를 체크해준다. useParams랑 무슨 차이지?</p>
+
+<p>rrd V6버전에서는 제네릭 사용 안됨. 따라서 as를 이용하여 접근.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//routerstate 인터페이스 생성(타입?)</span>
+<span class="kr">interface</span> <span class="nx">RouterState</span><span class="p">{</span>
+    <span class="nl">name</span><span class="p">:</span><span class="nx">string</span><span class="p">;</span>
+    <span class="nl">rank</span><span class="p">:</span><span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+    <span class="kd">const</span> <span class="nx">currentCoin</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">state</span> <span class="k">as</span> <span class="nx">RouterState</span><span class="p">;</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">currentCoin</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">currentCoin</span><span class="p">);</span>
+</code></pre></div></div>
+:ET
