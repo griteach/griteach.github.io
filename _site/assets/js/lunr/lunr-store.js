@@ -1,12 +1,21 @@
 var store = [{
-        "title": "마크다운 익히기 #1",
+        "title": "마크다운 #1",
         "excerpt":"NOTICE 🔅 Notice: 기본적인 노티스 ⚡️ Primary: 중요한 노티스 🚦 Info: 정보 노티스 ⛔️ Warning: 경고 노티스 ❌ Danger: Danger 노티스 ✅ Success: Success 노티스 하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. {: .notice--&lt;primary | info | warning | danger | success &gt;}...","categories": ["TIL"],
         "tags": ["markdown"],
         "url": "/til/markdown-1/",
         "teaser": null
       },{
-    "title": "마크다운 익히기 #1",
+        "title": "목표",
+        "excerpt":"2022 목표 리액트 익히기 노마드코더 리액트 마스터 과정 마무리 코인트래커 트렐로 클론 넷플릭스 클론 노마드코더 무료 강좌 전체 마무리 트위터 클론 코딩 Next JS 시작하기 줌 클론코딩 실전형 리액트 Hooks 10개 Nest JS로 API만들기 초보자를 위한 리덕스 101 GraphQL로 영화 API 만들기 ‘지금 우리 학교는’ 리액트로 재탄생시키기 Node JS Express...","categories": ["GOAL"],
+        "tags": ["goal","develop","plan"],
+        "url": "/goal/life/",
+        "teaser": null
+      },{
+    "title": "마크다운 #1",
     "excerpt":"NOTICE 🔅 Notice: 기본적인 노티스 ⚡️ Primary: 중요한 노티스 🚦 Info: 정보 노티스 ⛔️ Warning: 경고 노티스 ❌ Danger: Danger 노티스 ✅ Success: Success 노티스 하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. {: .notice--&lt;primary | info | warning | danger | success &gt;}...","url": "http://localhost:4000/_posts/2022-09-01-markdown-1/"
+  },{
+    "title": "목표",
+    "excerpt":"2022 목표 리액트 익히기 노마드코더 리액트 마스터 과정 마무리 코인트래커 트렐로 클론 넷플릭스 클론 노마드코더 무료 강좌 전체 마무리 트위터 클론 코딩 Next JS 시작하기 줌 클론코딩 실전형 리액트 Hooks 10개 Nest JS로 API만들기 초보자를 위한 리덕스 101 GraphQL로 영화 API 만들기 ‘지금 우리 학교는’ 리액트로 재탄생시키기 Node JS Express...","url": "http://localhost:4000/_posts/2022-09-02-life/"
   },{
     "title": "About",
     "excerpt":"  ","url": "http://localhost:4000/about/"
