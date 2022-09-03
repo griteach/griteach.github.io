@@ -23,6 +23,7 @@ tags:
 **Outlet 활용:**  
 outlet을 활용하여 전체 Router에 필요한 컴포넌트 & Route를 등록해두고 실제로 불러와야할 컴포넌트에서 `<Outlet />`으로 삽입해준다.
 {: .notice--info}
+
 ```javascript
 function Dashboard() {
   return (
@@ -52,12 +53,16 @@ function App() {
 }
 ```
 
+니코가 한 방식과는 다른데, react-router-dom v6로 업데이트 되면서 달라졌음. 
+
 
 ## Link
 
 **Link:**
-원하는 곳에 정보를 보낼 수 있다.
+원하는 곳에 정보를 보낼 수 있다. a태그와 다른 점은 새로고침을 하지 않는다는 것. a태그는 새로고침이 되지만 Link는 그렇지 않다. 따라서 새로고침 없이 원하는 동작을 시키기에 적합하다.
 {: .notice--info}
+
+
 
 # Components
 
@@ -187,6 +192,36 @@ import {createGlobalStyle} from 'styled-components';
 ### styled-reset
 1. 한 번에 reset css 시켜줌.
 
+### styled-components 안에 props 넣기
+
+```javascript
+const Tab = styled.span<{isActive: boolean}>`
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 7px 0px;
+    border-radius: 10px;
+    a {
+        display: block;
+    }
+    color:${props => props.isActive ? props.theme.accentColor : props.theme.textColor};
+`;
+
+//실제 사용 장면
+<Tabs>
+    <Tab isActive={chartMatch !== null}>
+        <Link to={`/${coinId}/chart`}>Chart</Link>
+    </Tab>
+    <Tab isActive={priceMatch !== null}>
+        <Link to={`/${coinId}/price`}>Price</Link>
+    </Tab>
+</Tabs>
+
+```
+
+
+
 
 # Hooks
 
@@ -232,5 +267,100 @@ const location = useLocation();
     console.log(typeof currentCoin);
 ```
 
+## useMatch
 
-ㄹ
+**useMatch:**  
+사용자가 특정한 URL에 있는지 그 여부를 알려주는 용도.
+{: .notice--info}
+
+**V6:** useMatch, **~V5**: useRouteMatch
+{: .notice--info}
+
+사용자가 선택한 URL에 들어가 있다면 Object를 돌려받고, 그 안에는 현재 url과 path, isExact:true가 들어있다. 원래대로라면. 허나 useMatch에서는 다른 값이 들어있다. 뭐 이걸로라도 현재 URL에 머물고 있는지 여부를 체크할 수 있다면 상관 없겠지. 만약 내가 해당 URL에 머물지 않는다면 null이 반환된다.
+
+
+
+# React Query
+
+**공식사이트:**  
+[React Query Docs](https://tanstack.com/query/v4/docs/quick-start)
+{: .notice--info}
+
+**버전 문제 확인:"**  
+react 버전이 18이면 타입스크립트에서 react query를 못 불러옵니다
+npm i @tanstack/react-query 를 입력해서 모듈을 설치하면 react query불러오기가 가능해집니다
+
+그리고 @tanstack/react-query에서 useQuery를 사용할때 query key의 값은 대괄호로 묶어줘야합니다
+
+const { isLoading, data } = useQuery(["allCoins"], fetchCoins);
+{: .notice--warning}
+
+
+```javascript
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+
+//queryClient 생성
+const queryClient = new QueryClient();
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  
+  <React.StrictMode>
+  //QueryClientProvider 감싸기
+  //props는 client={queryClient}로 넣어주기(필수)
+  //그 외에는 건드릴 것 없는듯?
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+      <App />
+      </ThemeProvider>
+    </QueryClientProvider>
+  </React.StrictMode>
+  
+);
+```
+
+
+
+1. fetcher 함수
+fetcher 함수 만들기. (fetch)함수와 더불어 json이라든지 state에 저장하는 작업이라든지 이러한 것들을 모두 합쳐놓은 듯한 느낌?
+
+2. 자동으로 캐싱이 된다.
+가져온 데이터는 캐시에 저장해 두었다가, 필요할 때 꺼내 쓴다. fetch를 사용했다면 매번 접속할 때마다 api에 접근했겠지만, react query는 캐시에 데이터를 저장해 두었다가 필요할 때 꺼내어 쓴다. 
+
+3. isLoading, data가 자동으로 포함돼있다.
+
+4. 비구조화 할당 시 이름 바꾸기
+비구조화 할당시 이름 바꾸기
+이번에는, 비구조화 할당을 하는 과정에서 선언 할 값의 이름을 바꾸는 방법을 알아보겠습니다.
+
+예를 들어서 다음과 같은 코드가 있다고 가정해봅시다.
+
+```javascript
+const animal = {
+  name: '멍멍이',
+  type: '개'
+};
+
+const nickname = animal.name;
+
+console.log(nickname); // 멍멍이
+```
+
+위 코드에서는 animal.name 값을 nickname 값에 담고 있는데요, 이름이 같다면 그냥 우리가 이전에 배웠던 대로 비구조화 할당을 쓰면 되는데 지금은 이름이 서로 다릅니다.
+
+이러한 상황에서는 : 문자를 사용해서 이름을 바꿔줄 수 있습니다.
+
+```javascript
+const animal = {
+  name: '멍멍이',
+  type: '개'
+};
+
+const { name: nickname } = animal
+console.log(nickname);
+```
+
+위 코드는 'animal 객체 안에 있는 name 을 nickname 이라고 선언하겠다.' 라는 의미입니다.
