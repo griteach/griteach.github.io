@@ -11,14 +11,15 @@ tags:
 
 # Router
 
-1. 원하는 곳에 뿌려주는 용도.
-2. 기본 구성 방법
+**Router:**  
+원하는 곳에 뿌려주는 용도.
+{: .notice--info}
+
 
 ## Nested Router
 라우터 안의 라우터
 웹사이트에서 탭을 사용할 때 도움이 된다.
 섹션이 나눠졌을 때도 만들 수 있지.
-
 
 **Outlet 활용:**  
 outlet을 활용하여 전체 Router에 필요한 컴포넌트 & Route를 등록해두고 실제로 불러와야할 컴포넌트에서 `<Outlet />`으로 삽입해준다.
@@ -66,7 +67,8 @@ function App() {
 
 # Components
 
-## return의 활용
+## components return 해 주기
+
 ```javascript
 
 //배열에 대한 map을 활용하여 반복된 리스트 출력해주기.
@@ -96,6 +98,12 @@ function App() {
 # Style
 
 ## reset css
+
+**reset css:**  
+브라우저가 가지고 있는 기본 css 스타일을 모두 **초기화**시켜준다. 
+{: .notice--info}
+
+
 ```css
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -181,7 +189,10 @@ const Coin = styled.li`
 
 ### createGlobalStyle
 
-> 스타일을 전체 적용할 때, 어디에서 작업을 해야 할까? styled-components들은 각자의 컴포넌트에 대한 스타일을 적용할 수도 있지만, 전체에 대한 것도 마련해 두었다.
+**createGlobalStyle:**  
+스타일을 전체 적용할 때, 어디에서 작업을 해야 할까? styled-components들은 각자의 컴포넌트에 대한 스타일을 적용할 수도 있지만, 전체에 대한 것도 마련해 두었다.
+{: .notice--info}
+
 
 ```javascript
 import {createGlobalStyle} from 'styled-components';
@@ -190,11 +201,16 @@ import {createGlobalStyle} from 'styled-components';
 이 컴포넌트는 렌더링 한 후에 전역 스코프에 스타일을 올려준다. 단독으로 적용되는 것이 아니라 전체, 글로벌로 적용.
 
 ### styled-reset
-1. 한 번에 reset css 시켜줌.
+**styled-reset:**  
+한 번에 reset css 만들어 줌.
+{: .notice--info}
+
 
 ### styled-components 안에 props 넣기
 
 ```javascript
+
+//isActive라는 props를 제너릭으로 세팅해주고.
 const Tab = styled.span<{isActive: boolean}>`
     text-align: center;
     text-transform: uppercase;
@@ -205,11 +221,14 @@ const Tab = styled.span<{isActive: boolean}>`
     a {
         display: block;
     }
+    
+    // 스타일 세팅 할 때 props를 가져다가 사용하기. 삼항연산자는 거의 밥먹듯이 사용.
     color:${props => props.isActive ? props.theme.accentColor : props.theme.textColor};
 `;
 
 //실제 사용 장면
 <Tabs>
+    // styled-components를 사용할 때 props를 넣어주는 모습. 값을 다이렉트로 넣을 수도 있고, js를 이용하여 로직을 넣을 수도 있다.
     <Tab isActive={chartMatch !== null}>
         <Link to={`/${coinId}/chart`}>Chart</Link>
     </Tab>
@@ -227,7 +246,10 @@ const Tab = styled.span<{isActive: boolean}>`
 
 ## useParams
 
-1. 현재 url에서 관심있는 정보를 잡아낼 수 있게 해주는 것.
+**useParams:**  
+현재 url에서 관심있는 정보를 잡아낼 수 있게 해주는 것.
+{: .notice--info}
+
 
 ## useState
 
@@ -364,3 +386,12 @@ console.log(nickname);
 ```
 
 위 코드는 'animal 객체 안에 있는 name 을 nickname 이라고 선언하겠다.' 라는 의미입니다.
+
+
+# etc
+
+## react-helmet
+
+**react-helmet:**  
+컴포넌트. 여기서 무엇을 render하든지 그것이 문서의 head로 가게된다. Helmet은 head로 가는 direct link일 뿐이다. 타이틀, css, favicon 등등 모든 것을 적용할 수 있다.
+{: .notice--info}
