@@ -195,22 +195,96 @@ const Coin = styled.li`
 
 
 ```javascript
+//App.tsx
+
+//임포트
 import {createGlobalStyle} from 'styled-components';
+
+//styled-components 생성 (feat. rest css)
+const GlobalStyle = createGlobalStyle`
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: ${props => props.theme.bgColor};
+  color:${props => props.theme.textColor};
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+`;
+
+
+//app 생성
+function App() {
+  return (<>
+    <GlobalStyle />
+    <Router />
+    <ReactQueryDevtools initialIsOpen={true} />
+    </>
+  );
+}
 ```
 
 이 컴포넌트는 렌더링 한 후에 전역 스코프에 스타일을 올려준다. 단독으로 적용되는 것이 아니라 전체, 글로벌로 적용.
 
-### styled-reset
+### styled-reset  
 **styled-reset:**  
 한 번에 reset css 만들어 줌.
 {: .notice--info}
+
+위의 방식이 맘에 들지 않는다면 styled-reset 패키지를 사용하면 된다. 손쉽게 reset-css를 적용해 준다고 하는데, 한 번 살펴봐야겠다. 
 
 
 ### styled-components 안에 props 넣기
 
 ```javascript
 
-//isActive라는 props를 제너릭으로 세팅해주고.
+//isActive라는 props를 세팅해주고.
 const Tab = styled.span<{isActive: boolean}>`
     text-align: center;
     text-transform: uppercase;
@@ -395,3 +469,12 @@ console.log(nickname);
 **react-helmet:**  
 컴포넌트. 여기서 무엇을 render하든지 그것이 문서의 head로 가게된다. Helmet은 head로 가는 direct link일 뿐이다. 타이틀, css, favicon 등등 모든 것을 적용할 수 있다.
 {: .notice--info}
+
+```javascript
+//아래의 코드를 컴포넌트 안에 넣어주면 된다.
+//타이틀 뿐 아니라 css, favicon등등 모두 가능
+//js로 로직을 넣을 수도 있으니 상황에 따라 필요한 데이터를 전달할 수 있다.
+<Helmet>
+    <title>Coins</title>
+</Helmet>
+```
