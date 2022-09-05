@@ -54,7 +54,7 @@ function App() {
 }
 ```
 
-니코가 한 방식과는 다른데, react-router-dom v6로 업데이트 되면서 달라졌음. 
+니코가 한 방식과는 다른데, react-router-dom v6로 업데이트 되면서 달라졌음. 라우터에서 분기가 필요한 장면들을 넣어두고 (coin-tracker의 chart, price 처럼) 로직에 따라 해당하는 컴포넌트를 `<Outlet />`으로 불러온다는 개념으로 이해하고 있음.
 
 
 ## Link
@@ -185,7 +185,7 @@ const Coin = styled.li`
     }
 `;
 ```
-컴포넌트마다 따로 스타일을 지정해 줄 수 있다. 이렇게 지정해 둔 스타일은 컴포넌트를 불러올 때마다 적용되기 때문에 리액트가 추구하는 방식에 참 어울린다는 생각이.. 기존 css에서 사용하던 모든 방식을 styled-components로도 대부분 사용할 수 있다. 
+컴포넌트마다 따로 스타일을 지정해 줄 수 있음. 이렇게 지정해 둔 스타일은 컴포넌트를 불러올 때마다 적용되기 때문에 리액트가 추구하는 방식에 참 어울린다는 생각이.. 기존 css에서 사용하던 모든 방식을 styled-components로도 대부분 사용할 수 있다. 
 
 ### createGlobalStyle
 
@@ -344,7 +344,7 @@ const [coins, setCoins] = useState<CoinInterface[]>([]);
 ## useLocation
 
 현재 페이지에 들어오는 데이터를 체크해준다. useParams랑 무슨 차이지?
--> useParams는 라우팅을 할 때 주소를 구분짓기 위한 id값 정도를 건네주고 받고 하는 느낌. 
+-> useParams는 라우팅을 할 때 주소를 구분짓기 위한 id값 정도를 건네주고 받고 하는 느낌. 보다 명확한 내용 파악 필요. 숙제<sup id="a1">[1](#f1)</sup>
 -> useLocation은 현재 나한테 들어온 값을 체크할 수 있는 것.
 -> Link를 사용해서 state를 전달할 수 있다.(state에는 다양한 데이터를 집어넣을 수 있지.)
 
@@ -478,3 +478,7 @@ console.log(nickname);
     <title>Coins</title>
 </Helmet>
 ```
+
+---
+
+<b id="f1">1</b>

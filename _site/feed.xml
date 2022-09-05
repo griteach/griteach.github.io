@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-03T00:05:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">목표</title><link href="http://localhost:4000/goal/life/" rel="alternate" type="text/html" title="목표" /><published>2022-09-02T00:00:00+09:00</published><updated>2022-09-02T00:00:00+09:00</updated><id>http://localhost:4000/goal/life</id><content type="html" xml:base="http://localhost:4000/goal/life/"><![CDATA[<h1 id="2022-목표">2022 목표</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-05T23:31:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">목표</title><link href="http://localhost:4000/goal/life/" rel="alternate" type="text/html" title="목표" /><published>2022-09-02T00:00:00+09:00</published><updated>2022-09-02T00:00:00+09:00</updated><id>http://localhost:4000/goal/life</id><content type="html" xml:base="http://localhost:4000/goal/life/"><![CDATA[<h1 id="2022-목표">2022 목표</h1>
 
-<h2 id="리액트-익히기">리액트 익히기</h2>
+<h2 id="리액트-스터디">리액트 스터디</h2>
 <ul>
   <li>노마드코더 리액트 마스터 과정 마무리
     <ul>
-      <li>코인트래커</li>
+      <li><del>코인트래커</del> (~22.9.5.)
+        <ul>
+          <li>github : <a href="https://github.com/griteach/coin-tracker-react">coin-tracker-react</a></li>
+        </ul>
+      </li>
       <li>트렐로 클론</li>
       <li>넷플릭스 클론</li>
     </ul>
@@ -35,19 +39,56 @@
 <img src="data:image/jpeg;base64,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" alt="study" /></li>
 </ul>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="GOAL" /><category term="goal" /><category term="develop" /><category term="plan" /><summary type="html"><![CDATA[일지 #1]]></summary></entry><entry><title type="html">React basic</title><link href="http://localhost:4000/react/react-study/" rel="alternate" type="text/html" title="React basic" /><published>2022-09-02T00:00:00+09:00</published><updated>2022-09-02T00:00:00+09:00</updated><id>http://localhost:4000/react/react-study</id><content type="html" xml:base="http://localhost:4000/react/react-study/"><![CDATA[<h1 id="router">Router</h1>
 
-<ol>
-  <li>원하는 곳에 뿌려주는 용도.</li>
-  <li>기본 구성 방법</li>
-</ol>
+<p class="notice--info"><strong>Router:</strong><br />
+원하는 곳에 뿌려주는 용도.</p>
+
+<h2 id="nested-router">Nested Router</h2>
+<p>라우터 안의 라우터
+웹사이트에서 탭을 사용할 때 도움이 된다.
+섹션이 나눠졌을 때도 만들 수 있지.</p>
+
+<p class="notice--info"><strong>Outlet 활용:</strong><br />
+outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 등록해두고 실제로 불러와야할 컴포넌트에서 <code class="language-plaintext highlighter-rouge">&lt;Outlet /&gt;</code>으로 삽입해준다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Dashboard</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Dashboard</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>
+      <span class="p">{</span><span class="cm">/* This element will render either &lt;DashboardMessages&gt; when the URL is
+          "/messages", &lt;DashboardTasks&gt; at "/tasks", or null if it is "/"
+      */</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="nx">Outlet</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Dashboard</span> <span class="o">/&gt;</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Route</span>
+          <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">messages</span><span class="dl">"</span>
+          <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">DashboardMessages</span> <span class="o">/&gt;</span><span class="p">}</span>
+        <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">tasks</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">DashboardTasks</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/Route</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Routes</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>니코가 한 방식과는 다른데, react-router-dom v6로 업데이트 되면서 달라졌음. 라우터에서 분기가 필요한 장면들을 넣어두고 (coin-tracker의 chart, price 처럼) 로직에 따라 해당하는 컴포넌트를 <code class="language-plaintext highlighter-rouge">&lt;Outlet /&gt;</code>으로 불러온다는 개념으로 이해하고 있음.</p>
 
 <h2 id="link">Link</h2>
 
 <p class="notice--info"><strong>Link:</strong>
-원하는 곳에 정보를 보낼 수 있다.</p>
+원하는 곳에 정보를 보낼 수 있다. a태그와 다른 점은 새로고침을 하지 않는다는 것. a태그는 새로고침이 되지만 Link는 그렇지 않다. 따라서 새로고침 없이 원하는 동작을 시키기에 적합하다.</p>
 
 <h1 id="components">Components</h1>
 
-<h2 id="return의-활용">return의 활용</h2>
+<h2 id="components-return-해-주기">components return 해 주기</h2>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">//배열에 대한 map을 활용하여 반복된 리스트 출력해주기.</span>
 <span class="c1">//여기에서는 Coin 컴포넌트를 map으로 호출하여 반복 출력해주고 있다.</span>
@@ -74,6 +115,10 @@
 <h1 id="style">Style</h1>
 
 <h2 id="reset-css">reset css</h2>
+
+<p class="notice--info"><strong>reset css:</strong><br />
+브라우저가 가지고 있는 기본 css 스타일을 모두 <strong>초기화</strong>시켜준다.</p>
+
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -153,31 +198,134 @@
     }
 `</span><span class="p">;</span>
 </code></pre></div></div>
-<p>컴포넌트마다 따로 스타일을 지정해 줄 수 있다. 이렇게 지정해 둔 스타일은 컴포넌트를 불러올 때마다 적용되기 때문에 리액트가 추구하는 방식에 참 어울린다는 생각이.. 기존 css에서 사용하던 모든 방식을 styled-components로도 대부분 사용할 수 있다.</p>
+<p>컴포넌트마다 따로 스타일을 지정해 줄 수 있음. 이렇게 지정해 둔 스타일은 컴포넌트를 불러올 때마다 적용되기 때문에 리액트가 추구하는 방식에 참 어울린다는 생각이.. 기존 css에서 사용하던 모든 방식을 styled-components로도 대부분 사용할 수 있다.</p>
 
 <h3 id="createglobalstyle">createGlobalStyle</h3>
 
-<blockquote>
-  <p>스타일을 전체 적용할 때, 어디에서 작업을 해야 할까? styled-components들은 각자의 컴포넌트에 대한 스타일을 적용할 수도 있지만, 전체에 대한 것도 마련해 두었다.</p>
-</blockquote>
+<p class="notice--info"><strong>createGlobalStyle:</strong><br />
+스타일을 전체 적용할 때, 어디에서 작업을 해야 할까? styled-components들은 각자의 컴포넌트에 대한 스타일을 적용할 수도 있지만, 전체에 대한 것도 마련해 두었다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">createGlobalStyle</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//App.tsx</span>
+
+<span class="c1">//임포트</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">createGlobalStyle</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">//styled-components 생성 (feat. rest css)</span>
+<span class="kd">const</span> <span class="nx">GlobalStyle</span> <span class="o">=</span> <span class="nx">createGlobalStyle</span><span class="s2">`
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: </span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">}</span><span class="s2">;
+  color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">textColor</span><span class="p">}</span><span class="s2">;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+`</span><span class="p">;</span>
+
+
+<span class="c1">//app 생성</span>
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="o">&lt;&gt;</span>
+    <span class="o">&lt;</span><span class="nx">GlobalStyle</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Router</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">ReactQueryDevtools</span> <span class="nx">initialIsOpen</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>이 컴포넌트는 렌더링 한 후에 전역 스코프에 스타일을 올려준다. 단독으로 적용되는 것이 아니라 전체, 글로벌로 적용.</p>
 
 <h3 id="styled-reset">styled-reset</h3>
-<ol>
-  <li>한 번에 reset css 시켜줌.</li>
-</ol>
+<p class="notice--info"><strong>styled-reset:</strong><br />
+한 번에 reset css 만들어 줌.</p>
+
+<p>위의 방식이 맘에 들지 않는다면 styled-reset 패키지를 사용하면 된다. 손쉽게 reset-css를 적용해 준다고 하는데, 한 번 살펴봐야겠다.</p>
+
+<h3 id="styled-components-안에-props-넣기">styled-components 안에 props 넣기</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">//isActive라는 props를 세팅해주고.</span>
+<span class="kd">const</span> <span class="nx">Tab</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">span</span><span class="o">&lt;</span><span class="p">{</span><span class="na">isActive</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">}</span><span class="o">&gt;</span><span class="s2">`
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 7px 0px;
+    border-radius: 10px;
+    a {
+        display: block;
+    }
+    
+    // 스타일 세팅 할 때 props를 가져다가 사용하기. 삼항연산자는 거의 밥먹듯이 사용.
+    color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">isActive</span> <span class="p">?</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">accentColor</span> <span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">textColor</span><span class="p">}</span><span class="s2">;
+`</span><span class="p">;</span>
+
+<span class="c1">//실제 사용 장면</span>
+<span class="o">&lt;</span><span class="nx">Tabs</span><span class="o">&gt;</span>
+    <span class="c1">// styled-components를 사용할 때 props를 넣어주는 모습. 값을 다이렉트로 넣을 수도 있고, js를 이용하여 로직을 넣을 수도 있다.</span>
+    <span class="o">&lt;</span><span class="nx">Tab</span> <span class="nx">isActive</span><span class="o">=</span><span class="p">{</span><span class="nx">chartMatch</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coinId</span><span class="p">}</span><span class="s2">/chart`</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Chart</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Tab</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Tab</span> <span class="nx">isActive</span><span class="o">=</span><span class="p">{</span><span class="nx">priceMatch</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coinId</span><span class="p">}</span><span class="s2">/price`</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Price</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Tab</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/Tabs</span><span class="err">&gt;
+</span>
+</code></pre></div></div>
 
 <h1 id="hooks">Hooks</h1>
 
 <h2 id="useparams">useParams</h2>
 
-<ol>
-  <li>현재 url에서 관심있는 정보를 잡아낼 수 있게 해주는 것.</li>
-</ol>
+<p class="notice--info"><strong>useParams:</strong><br />
+현재 url에서 관심있는 정보를 잡아낼 수 있게 해주는 것.</p>
 
 <h2 id="usestate">useState</h2>
 
@@ -198,7 +346,7 @@
 <h2 id="uselocation">useLocation</h2>
 
 <p>현재 페이지에 들어오는 데이터를 체크해준다. useParams랑 무슨 차이지?
--&gt; useParams는 라우팅을 할 때 주소를 구분짓기 위한 id값 정도를 건네주고 받고 하는 느낌. 
+-&gt; useParams는 라우팅을 할 때 주소를 구분짓기 위한 id값 정도를 건네주고 받고 하는 느낌. 보다 명확한 내용 파악 필요. 숙제<sup id="a1"><a href="#f1">1</a></sup>
 -&gt; useLocation은 현재 나한테 들어온 값을 체크할 수 있는 것.
 -&gt; Link를 사용해서 state를 전달할 수 있다.(state에는 다양한 데이터를 집어넣을 수 있지.)</p>
 
@@ -216,7 +364,117 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">currentCoin</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>ㄹ</p>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="React" /><category term="React" /><category term="develop" /><category term="study" /><summary type="html"><![CDATA[study #1]]></summary></entry><entry><title type="html">마크다운 #1</title><link href="http://localhost:4000/til/markdown-1/" rel="alternate" type="text/html" title="마크다운 #1" /><published>2022-09-01T00:00:00+09:00</published><updated>2022-09-01T00:00:00+09:00</updated><id>http://localhost:4000/til/markdown-1</id><content type="html" xml:base="http://localhost:4000/til/markdown-1/"><![CDATA[<h1 id="notice">NOTICE</h1>
+<h2 id="usematch">useMatch</h2>
+
+<p class="notice--info"><strong>useMatch:</strong><br />
+사용자가 특정한 URL에 있는지 그 여부를 알려주는 용도.</p>
+
+<p class="notice--info"><strong>V6:</strong> useMatch, <strong>~V5</strong>: useRouteMatch</p>
+
+<p>사용자가 선택한 URL에 들어가 있다면 Object를 돌려받고, 그 안에는 현재 url과 path, isExact:true가 들어있다. 원래대로라면. 허나 useMatch에서는 다른 값이 들어있다. 뭐 이걸로라도 현재 URL에 머물고 있는지 여부를 체크할 수 있다면 상관 없겠지. 만약 내가 해당 URL에 머물지 않는다면 null이 반환된다.</p>
+
+<h1 id="react-query">React Query</h1>
+
+<p class="notice--info"><strong>공식사이트:</strong><br />
+<a href="https://tanstack.com/query/v4/docs/quick-start">React Query Docs</a></p>
+
+<p><strong>버전 문제 확인:”</strong><br />
+react 버전이 18이면 타입스크립트에서 react query를 못 불러옵니다
+npm i @tanstack/react-query 를 입력해서 모듈을 설치하면 react query불러오기가 가능해집니다</p>
+
+<p>그리고 @tanstack/react-query에서 useQuery를 사용할때 query key의 값은 대괄호로 묶어줘야합니다</p>
+
+<p class="notice--warning">const { isLoading, data } = useQuery([“allCoins”], fetchCoins);</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">QueryClient</span><span class="p">,</span> <span class="nx">QueryClientProvider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-query</span><span class="dl">'</span><span class="p">;</span>
+
+
+<span class="c1">//queryClient 생성</span>
+<span class="kd">const</span> <span class="nx">queryClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">QueryClient</span><span class="p">();</span>
+
+<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span> <span class="k">as</span> <span class="nx">HTMLElement</span>
+<span class="p">);</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+  <span class="c1">//QueryClientProvider 감싸기</span>
+  <span class="c1">//props는 client={queryClient}로 넣어주기(필수)</span>
+  <span class="c1">//그 외에는 건드릴 것 없는듯?</span>
+    <span class="o">&lt;</span><span class="nx">QueryClientProvider</span> <span class="nx">client</span><span class="o">=</span><span class="p">{</span><span class="nx">queryClient</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ThemeProvider</span> <span class="nx">theme</span><span class="o">=</span><span class="p">{</span><span class="nx">theme</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/ThemeProvider</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/QueryClientProvider</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/React.StrictMode</span><span class="err">&gt;
+</span>  
+<span class="p">);</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>fetcher 함수
+fetcher 함수 만들기. (fetch)함수와 더불어 json이라든지 state에 저장하는 작업이라든지 이러한 것들을 모두 합쳐놓은 듯한 느낌?</p>
+  </li>
+  <li>
+    <p>자동으로 캐싱이 된다.
+가져온 데이터는 캐시에 저장해 두었다가, 필요할 때 꺼내 쓴다. fetch를 사용했다면 매번 접속할 때마다 api에 접근했겠지만, react query는 캐시에 데이터를 저장해 두었다가 필요할 때 꺼내어 쓴다.</p>
+  </li>
+  <li>
+    <p>isLoading, data가 자동으로 포함돼있다.</p>
+  </li>
+  <li>
+    <p>비구조화 할당 시 이름 바꾸기
+비구조화 할당시 이름 바꾸기
+이번에는, 비구조화 할당을 하는 과정에서 선언 할 값의 이름을 바꾸는 방법을 알아보겠습니다.</p>
+  </li>
+</ol>
+
+<p>예를 들어서 다음과 같은 코드가 있다고 가정해봅시다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">animal</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">개</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">nickname</span> <span class="o">=</span> <span class="nx">animal</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nickname</span><span class="p">);</span> <span class="c1">// 멍멍이</span>
+</code></pre></div></div>
+
+<p>위 코드에서는 animal.name 값을 nickname 값에 담고 있는데요, 이름이 같다면 그냥 우리가 이전에 배웠던 대로 비구조화 할당을 쓰면 되는데 지금은 이름이 서로 다릅니다.</p>
+
+<p>이러한 상황에서는 : 문자를 사용해서 이름을 바꿔줄 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">animal</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">개</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="nx">nickname</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">animal</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nickname</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>위 코드는 ‘animal 객체 안에 있는 name 을 nickname 이라고 선언하겠다.’ 라는 의미입니다.</p>
+
+<h1 id="etc">etc</h1>
+
+<h2 id="react-helmet">react-helmet</h2>
+
+<p class="notice--info"><strong>react-helmet:</strong><br />
+컴포넌트. 여기서 무엇을 render하든지 그것이 문서의 head로 가게된다. Helmet은 head로 가는 direct link일 뿐이다. 타이틀, css, favicon 등등 모든 것을 적용할 수 있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//아래의 코드를 컴포넌트 안에 넣어주면 된다.</span>
+<span class="c1">//타이틀 뿐 아니라 css, favicon등등 모두 가능</span>
+<span class="c1">//js로 로직을 넣을 수도 있으니 상황에 따라 필요한 데이터를 전달할 수 있다.</span>
+<span class="o">&lt;</span><span class="nx">Helmet</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Coins</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/Helmet</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<hr />
+
+<p><b id="f1">1</b></p>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="React" /><category term="React" /><category term="develop" /><category term="study" /><summary type="html"><![CDATA[study #1]]></summary></entry><entry><title type="html">마크다운 #1</title><link href="http://localhost:4000/til/markdown-1/" rel="alternate" type="text/html" title="마크다운 #1" /><published>2022-09-01T00:00:00+09:00</published><updated>2022-09-01T00:00:00+09:00</updated><id>http://localhost:4000/til/markdown-1</id><content type="html" xml:base="http://localhost:4000/til/markdown-1/"><![CDATA[<h1 id="notice">NOTICE</h1>
 
 <p class="notice"><strong>🔅 Notice:</strong><br />
 기본적인 노티스</p>
