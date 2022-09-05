@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-05T23:31:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">목표</title><link href="http://localhost:4000/goal/life/" rel="alternate" type="text/html" title="목표" /><published>2022-09-02T00:00:00+09:00</published><updated>2022-09-02T00:00:00+09:00</updated><id>http://localhost:4000/goal/life</id><content type="html" xml:base="http://localhost:4000/goal/life/"><![CDATA[<h1 id="2022-목표">2022 목표</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-05T23:57:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">목표</title><link href="http://localhost:4000/goal/life/" rel="alternate" type="text/html" title="목표" /><published>2022-09-02T00:00:00+09:00</published><updated>2022-09-02T00:00:00+09:00</updated><id>http://localhost:4000/goal/life</id><content type="html" xml:base="http://localhost:4000/goal/life/"><![CDATA[<h1 id="2022-목표">2022 목표</h1>
 
 <h2 id="리액트-스터디">리액트 스터디</h2>
 <ul>
@@ -9,19 +9,34 @@
           <li>github : <a href="https://github.com/griteach/coin-tracker-react">coin-tracker-react</a></li>
         </ul>
       </li>
+      <li>State management</li>
       <li>트렐로 클론</li>
+      <li>Animations</li>
       <li>넷플릭스 클론</li>
     </ul>
   </li>
   <li>노마드코더 무료 강좌 전체 마무리
     <ul>
-      <li>트위터 클론 코딩</li>
-      <li>Next JS 시작하기</li>
-      <li>줌 클론코딩</li>
       <li>실전형 리액트 Hooks 10개</li>
-      <li>Nest JS로 API만들기</li>
       <li>초보자를 위한 리덕스 101</li>
-      <li>GraphQL로 영화 API 만들기</li>
+      <li>Next JS 시작하기 (SSR을 강화시켜주는 React Framework)
+        <ul>
+          <li>최종적으로 SSR이 SEO에서 중요한 역할을 하기에, Next JS를 알아야 한다.</li>
+        </ul>
+      </li>
+      <li>Nest JS로 API만들기</li>
+      <li>GraphQL로 영화 API 만들기
+        <ul>
+          <li>REST API는 데이터 덩어리를 다 받아야 하지만 GraphQL은 그렇지 않다는데..?</li>
+        </ul>
+      </li>
+      <li>줌 클론코딩
+-JS 연습</li>
+      <li>트위터 클론 코딩
+        <ul>
+          <li>Firebase Auth 구현. firestore도 건드리고.</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
