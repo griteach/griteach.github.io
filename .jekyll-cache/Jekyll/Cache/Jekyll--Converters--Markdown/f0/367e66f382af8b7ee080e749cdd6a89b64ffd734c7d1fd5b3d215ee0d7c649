@@ -1,0 +1,75 @@
+I"*<h1 id="grid-layout">Grid layout</h1>
+
+<h2 id="flex와의-차이">Flex와의 차이</h2>
+<p class="notice--info"><strong>Flex layout:</strong><br />
+주축과 교차축으로 아이템을 정렬시키는 방식. 축이 기준이며 하나의 방향만 가지고 있다. 수평 또는 수직. 물론 기준 방향을 변경할 수 있으며 대부분의 레이아웃은 flex를 이용하여 만들어 낼 수 있다.</p>
+
+<p class="notice--info"><strong>Grid layout:</strong><br />
+열과 행을 이용하여 아이템을 정렬시키는 방식. 열, 행이 기준이며 격자 무늬를 떠올리면 이해가 쉽다. 구조화된 레이아웃을 꾸미는데 적합하며 전체적인 레이아웃을 Grid로, 세부적인 레이아웃을 Flex로 꾸미는 것도 좋다.</p>
+
+<blockquote>
+  <ol>
+    <li>부모 컨테이너에 grid 지정하기</li>
+  </ol>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">display</span><span class="o">:</span> <span class="nt">grid</span><span class="o">;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <ol>
+    <li>grid-template-columns: 열이 몇 개인지?</li>
+  </ol>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">1</span><span class="nt">fr</span> <span class="err">1</span><span class="nt">fr</span> <span class="err">2</span><span class="nt">fr</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">1</span><span class="nt">fr</span><span class="o">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <ol>
+    <li>grid-template-rows: 행이 몇 개인지?</li>
+  </ol>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">grid-template-rows</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-rows</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">150</span><span class="nt">px</span><span class="o">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <ol>
+    <li>grid-auto-rows: 행의 높이를 컨텐츠의 양에 따라서 자동으로 조절할 수 있는 방식</li>
+  </ol>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">행의</span> <span class="nt">높이를</span> <span class="nt">컨텐츠의</span> <span class="nt">양에</span> <span class="nt">따라서</span> <span class="nt">자동으로</span> <span class="nt">조절할</span> <span class="nt">수</span> <span class="nt">있는</span> <span class="nt">방식</span>
+<span class="o">//</span><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="err">150</span><span class="nt">px</span><span class="o">,</span> <span class="nt">auto</span><span class="o">);</span>
+<span class="o">//</span><span class="nt">컨텐츠가</span> <span class="nt">없으면</span> <span class="err">150</span><span class="nt">px</span> <span class="nt">최소</span><span class="o">,</span> <span class="nt">컨텐츠가</span> <span class="nt">박스를</span> <span class="nt">넘어가면</span> <span class="nt">최대</span> <span class="nt">높이는</span> <span class="nt">auto로</span> <span class="nt">자동</span> <span class="nt">변경</span>
+</code></pre></div></div>
+
+<blockquote>
+  <ol>
+    <li>grid-template-areas:구역을 설정하여 아이템 배치</li>
+  </ol>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">행의</span> <span class="nt">높이를</span> <span class="nt">컨텐츠의</span> <span class="nt">양에</span> <span class="nt">따라서</span> <span class="nt">자동으로</span> <span class="nt">조절할</span> <span class="nt">수</span> <span class="nt">있는</span> <span class="nt">방식</span>
+<span class="o">//</span><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="err">150</span><span class="nt">px</span><span class="o">,</span> <span class="nt">auto</span><span class="o">);</span>
+<span class="o">//</span><span class="nt">컨텐츠가</span> <span class="nt">없으면</span> <span class="err">150</span><span class="nt">px</span> <span class="nt">최소</span><span class="o">,</span> <span class="nt">컨텐츠가</span> <span class="nt">박스를</span> <span class="nt">넘어가면</span> <span class="nt">최대</span> <span class="nt">높이는</span> <span class="nt">auto로</span> <span class="nt">자동</span> <span class="nt">변경</span>
+</code></pre></div></div>
+
+<p>grid-template-areas:구역을 설정하여 아이템 배치(굿)
+grid-gap:아이템 간격 일괄 부여
+grid-column-gap: 아이템 열 간격 부여
+grid-row-gap: 아이템 행 간격 부여</p>
+
+<p>grid-auto-rows: 현재 행이 몇개가 될 지 모른다면 auto를 넣어서 자동으로 크기 조절이 되도록 한다.</p>
+
+<p>//자식 요소 grid cell
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end</p>
+
+:ET

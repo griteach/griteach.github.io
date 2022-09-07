@@ -17,6 +17,12 @@ var store = [{
         "url": "/react/react-study/",
         "teaser": null
       },{
+        "title": "CSS grid layout",
+        "excerpt":"Grid layout Flex와의 차이 Flex layout: 주축과 교차축으로 아이템을 정렬시키는 방식. 축이 기준이며 하나의 방향만 가지고 있다. 수평 또는 수직. 물론 기준 방향을 변경할 수 있으며 대부분의 레이아웃은 flex를 이용하여 만들어 낼 수 있다. Grid layout: 열과 행을 이용하여 아이템을 정렬시키는 방식. 열, 행이 기준이며 격자 무늬를 떠올리면 이해가 쉽다....","categories": ["CSS"],
+        "tags": ["css","grid","study"],
+        "url": "/css/css/",
+        "teaser": null
+      },{
     "title": "마크다운 #1",
     "excerpt":"NOTICE 🔅 Notice: 기본적인 노티스 ⚡️ Primary: 중요한 노티스 🚦 Info: 정보 노티스 ⛔️ Warning: 경고 노티스 ❌ Danger: Danger 노티스 ✅ Success: Success 노티스 하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. {: .notice--&lt;primary | info | warning | danger | success &gt;}...","url": "http://localhost:4000/_posts/2022-09-01-markdown-1/"
   },{
@@ -25,6 +31,9 @@ var store = [{
   },{
     "title": "React basic",
     "excerpt":"Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용: outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 등록해두고 실제로 불러와야할 컴포넌트에서 &lt;Outlet /&gt;으로 삽입해준다. function Dashboard() { return ( &lt;div&gt; &lt;h1&gt;Dashboard&lt;/h1&gt; {/* This element...","url": "http://localhost:4000/_posts/2022-09-02-react-study/"
+  },{
+    "title": "CSS grid layout",
+    "excerpt":"Grid layout Flex와의 차이 Flex layout: 주축과 교차축으로 아이템을 정렬시키는 방식. 축이 기준이며 하나의 방향만 가지고 있다. 수평 또는 수직. 물론 기준 방향을 변경할 수 있으며 대부분의 레이아웃은 flex를 이용하여 만들어 낼 수 있다. Grid layout: 열과 행을 이용하여 아이템을 정렬시키는 방식. 열, 행이 기준이며 격자 무늬를 떠올리면 이해가 쉽다....","url": "http://localhost:4000/_posts/2022-09-06-css/"
   },{
     "title": "About",
     "excerpt":"  ","url": "http://localhost:4000/about/"

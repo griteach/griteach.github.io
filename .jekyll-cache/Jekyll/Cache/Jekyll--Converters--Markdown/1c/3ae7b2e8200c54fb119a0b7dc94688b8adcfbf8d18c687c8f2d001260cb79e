@@ -1,0 +1,136 @@
+I"=-<h1 id="grid-layout">Grid layout</h1>
+
+<h2 id="flex와의-차이">Flex와의 차이</h2>
+<p class="notice--info"><strong>Flex layout:</strong><br />
+주축과 교차축으로 아이템을 정렬시키는 방식. 축이 기준이며 하나의 방향만 가지고 있다. 수평 또는 수직. 물론 기준 방향을 변경할 수 있으며 대부분의 레이아웃은 flex를 이용하여 만들어 낼 수 있다.</p>
+
+<p class="notice--info"><strong>Grid layout:</strong><br />
+열과 행을 이용하여 아이템을 정렬시키는 방식. 열, 행이 기준이며 격자 무늬를 떠올리면 이해가 쉽다. 구조화된 레이아웃을 꾸미는데 적합하며 전체적인 레이아웃을 Grid로, 세부적인 레이아웃을 Flex로 꾸미는 것도 좋다.</p>
+
+<h2 id="grid-적용하기-feat-부모요소">grid 적용하기 (feat. 부모요소)</h2>
+
+<blockquote>
+  <p>부모 컨테이너에 grid 지정하기</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">display</span><span class="o">:</span> <span class="nt">grid</span><span class="o">;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-template-columns: 열이 몇 개인지?</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">1</span><span class="nt">fr</span> <span class="err">1</span><span class="nt">fr</span> <span class="err">2</span><span class="nt">fr</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">1</span><span class="nt">fr</span><span class="o">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-template-rows: 행이 몇 개인지?</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">grid-template-rows</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-rows</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">150</span><span class="nt">px</span><span class="o">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-auto-rows: 행의 높이를 컨텐츠의 양에 따라서 자동으로 조절할 수 있는 방식</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">행의</span> <span class="nt">높이를</span> <span class="nt">컨텐츠의</span> <span class="nt">양에</span> <span class="nt">따라서</span> <span class="nt">자동으로</span> <span class="nt">조절할</span> <span class="nt">수</span> <span class="nt">있는</span> <span class="nt">방식</span>
+<span class="o">//</span><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="err">150</span><span class="nt">px</span><span class="o">,</span> <span class="nt">auto</span><span class="o">);</span>
+<span class="o">//</span><span class="nt">컨텐츠가</span> <span class="nt">없으면</span> <span class="err">150</span><span class="nt">px</span> <span class="nt">최소</span><span class="o">,</span> <span class="nt">컨텐츠가</span> <span class="nt">박스를</span> <span class="nt">넘어가면</span> <span class="nt">최대</span> <span class="nt">높이는</span> <span class="nt">auto로</span> <span class="nt">자동</span> <span class="nt">변경</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-template-areas: 구역을 설정하여 아이템 배치</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">행의</span> <span class="nt">높이를</span> <span class="nt">컨텐츠의</span> <span class="nt">양에</span> <span class="nt">따라서</span> <span class="nt">자동으로</span> <span class="nt">조절할</span> <span class="nt">수</span> <span class="nt">있는</span> <span class="nt">방식</span>
+<span class="o">//</span><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="err">150</span><span class="nt">px</span><span class="o">,</span> <span class="nt">auto</span><span class="o">);</span>
+<span class="o">//</span><span class="nt">컨텐츠가</span> <span class="nt">없으면</span> <span class="err">150</span><span class="nt">px</span> <span class="nt">최소</span><span class="o">,</span> <span class="nt">컨텐츠가</span> <span class="nt">박스를</span> <span class="nt">넘어가면</span> <span class="nt">최대</span> <span class="nt">높이는</span> <span class="nt">auto로</span> <span class="nt">자동</span> <span class="nt">변경</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-gap: 전체 아이템 간의 간격을 조절할 때 사용</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-gap</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span><span class="nt">열</span><span class="o">,</span> <span class="nt">행</span> <span class="nt">모두</span> <span class="err">10</span><span class="nt">px</span> <span class="nt">갭</span> <span class="nt">설정</span>
+
+<span class="nt">grid-column-gap</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span><span class="nt">열</span> <span class="nt">사이</span> <span class="nt">갭을</span> <span class="err">10</span><span class="nt">px로</span>
+
+<span class="nt">grid-row-gap</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span><span class="nt">행</span> <span class="nt">사이</span> <span class="nt">갭을</span> <span class="err">10</span><span class="nt">px로</span>
+
+</code></pre></div></div>
+
+<h2 id="grid-적용하기feat자식요소">grid 적용하기(feat.자식요소)</h2>
+
+<blockquote>
+  <p>grid-column-start: 해당 셀의 시작 지점과 끝 지점을 지정하여 원하는 만큼 영역을 차지하도록 해줌.</p>
+</blockquote>
+
+<p class="notice--info"><strong>순서 나타내는 방법:</strong><br />
+앞에서 부터 1, 2, 3, 4로 세고, 뒤에서 부터는 -1, -2, -3, -4로 센다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">.item2</span> <span class="p">{</span>
+    <span class="err">//한</span> <span class="err">번에</span> <span class="err">표현하면</span>
+    <span class="nl">grid-column</span><span class="p">:</span> <span class="m">2</span><span class="p">/</span><span class="m">4</span><span class="p">;</span>
+    <span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span><span class="p">/</span><span class="m">4</span><span class="p">;</span>
+    
+    <span class="err">//열의</span> <span class="err">시작과</span> <span class="err">끝을</span> <span class="err">나타낼</span> <span class="err">때</span>
+    <span class="py">grid-column-start</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+    <span class="py">grid-column-end</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+    
+    <span class="err">//행의</span> <span class="err">시작과</span> <span class="err">끝을</span> <span class="err">나타낼</span> <span class="err">때</span>
+    <span class="py">grid-row-start</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+    <span class="py">grid-row-end</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+    
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="grid-areas">grid areas</h2>
+
+<blockquote>
+  <p>grid-template-areas: 부모요소에서 레이아웃의 각 영역 이름을 설정하고, 그 이름을 자식요소에게 부여하여 영역을 조정하는 방식.</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+  <span class="o">//</span><span class="nt">부모요소</span>
+  <span class="nt">display</span><span class="o">:</span> <span class="nt">grid</span><span class="o">;</span>
+  <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">1</span><span class="nt">fr</span><span class="o">);</span>
+  <span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="err">150</span><span class="nt">px</span><span class="o">;</span>
+  <span class="nt">grid-gap</span><span class="o">:</span><span class="err">1</span><span class="nt">rem</span><span class="o">;</span>
+  <span class="nt">grid-template-areas</span><span class="o">:</span>
+  <span class="s2">'a a a'</span>
+  <span class="s2">'b c c'</span>
+  <span class="s2">'b d g'</span>
+  <span class="s2">'e f g'</span>
+
+  <span class="o">//</span><span class="nt">자식요소</span>
+  <span class="nc">.image1</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">a</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image2</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image3</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">c</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image4</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">d</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image5</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">e</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image6</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">f</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image7</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">g</span><span class="p">;</span> 
+  <span class="p">}</span>
+
+</code></pre></div></div>
+:ET

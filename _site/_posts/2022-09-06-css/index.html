@@ -1,0 +1,582 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CSS grid layout - Just do it</title>
+<meta name="description" content="study #2">
+
+
+  <meta name="author" content="griteach">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Just do it">
+<meta property="og:title" content="CSS grid layout">
+<meta property="og:url" content="http://localhost:4000/_posts/2022-09-06-css/">
+
+
+  <meta property="og:description" content="study #2">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_posts/2022-09-06-css/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "griteach",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Just do it Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/griteach_logo_circle.png" alt="Just do it"></a>
+        
+        <a class="site-title" href="/">
+          Just do it
+          <span class="site-subtitle">Version 1.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">Introduce</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">griteach</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>의미있는 시간이 쌓여 의미있는 것이 만들어지길.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">wonju</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:griteach22@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://griteach.github.com/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:griteach22@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="griteach22@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CSS grid layout">
+    <meta itemprop="description" content="study #2">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/_posts/2022-09-06-css/" class="u-url" itemprop="url">CSS grid layout
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h1 id="grid-layout">Grid layout</h1>
+
+<h2 id="flex와의-차이">Flex와의 차이</h2>
+<p class="notice--info"><strong>Flex layout:</strong><br />
+주축과 교차축으로 아이템을 정렬시키는 방식. 축이 기준이며 하나의 방향만 가지고 있다. 수평 또는 수직. 물론 기준 방향을 변경할 수 있으며 대부분의 레이아웃은 flex를 이용하여 만들어 낼 수 있다.</p>
+
+<p class="notice--info"><strong>Grid layout:</strong><br />
+열과 행을 이용하여 아이템을 정렬시키는 방식. 열, 행이 기준이며 격자 무늬를 떠올리면 이해가 쉽다. 구조화된 레이아웃을 꾸미는데 적합하며 전체적인 레이아웃을 Grid로, 세부적인 레이아웃을 Flex로 꾸미는 것도 좋다.</p>
+
+<h2 id="grid-적용하기-feat-부모요소">grid 적용하기 (feat. 부모요소)</h2>
+
+<blockquote>
+  <p>부모 컨테이너에 grid 지정하기</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">display</span><span class="o">:</span> <span class="nt">grid</span><span class="o">;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-template-columns: 열이 몇 개인지?</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">1</span><span class="nt">fr</span> <span class="err">1</span><span class="nt">fr</span> <span class="err">2</span><span class="nt">fr</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">1</span><span class="nt">fr</span><span class="o">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-template-rows: 행이 몇 개인지?</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">grid-template-rows</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span> <span class="nt">grid-template-rows</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">150</span><span class="nt">px</span><span class="o">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-auto-rows: 행의 높이를 컨텐츠의 양에 따라서 자동으로 조절할 수 있는 방식</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">행의</span> <span class="nt">높이를</span> <span class="nt">컨텐츠의</span> <span class="nt">양에</span> <span class="nt">따라서</span> <span class="nt">자동으로</span> <span class="nt">조절할</span> <span class="nt">수</span> <span class="nt">있는</span> <span class="nt">방식</span>
+<span class="o">//</span><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="err">150</span><span class="nt">px</span><span class="o">,</span> <span class="nt">auto</span><span class="o">);</span>
+<span class="o">//</span><span class="nt">컨텐츠가</span> <span class="nt">없으면</span> <span class="err">150</span><span class="nt">px</span> <span class="nt">최소</span><span class="o">,</span> <span class="nt">컨텐츠가</span> <span class="nt">박스를</span> <span class="nt">넘어가면</span> <span class="nt">최대</span> <span class="nt">높이는</span> <span class="nt">auto로</span> <span class="nt">자동</span> <span class="nt">변경</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-template-areas: 구역을 설정하여 아이템 배치</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">행의</span> <span class="nt">높이를</span> <span class="nt">컨텐츠의</span> <span class="nt">양에</span> <span class="nt">따라서</span> <span class="nt">자동으로</span> <span class="nt">조절할</span> <span class="nt">수</span> <span class="nt">있는</span> <span class="nt">방식</span>
+<span class="o">//</span><span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="nt">minmax</span><span class="o">(</span><span class="err">150</span><span class="nt">px</span><span class="o">,</span> <span class="nt">auto</span><span class="o">);</span>
+<span class="o">//</span><span class="nt">컨텐츠가</span> <span class="nt">없으면</span> <span class="err">150</span><span class="nt">px</span> <span class="nt">최소</span><span class="o">,</span> <span class="nt">컨텐츠가</span> <span class="nt">박스를</span> <span class="nt">넘어가면</span> <span class="nt">최대</span> <span class="nt">높이는</span> <span class="nt">auto로</span> <span class="nt">자동</span> <span class="nt">변경</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>grid-gap: 전체 아이템 간의 간격을 조절할 때 사용</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-gap</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span><span class="nt">열</span><span class="o">,</span> <span class="nt">행</span> <span class="nt">모두</span> <span class="err">10</span><span class="nt">px</span> <span class="nt">갭</span> <span class="nt">설정</span>
+
+<span class="nt">grid-column-gap</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span><span class="nt">열</span> <span class="nt">사이</span> <span class="nt">갭을</span> <span class="err">10</span><span class="nt">px로</span>
+
+<span class="nt">grid-row-gap</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="o">//</span><span class="nt">행</span> <span class="nt">사이</span> <span class="nt">갭을</span> <span class="err">10</span><span class="nt">px로</span>
+
+</code></pre></div></div>
+
+<h2 id="grid-적용하기feat자식요소">grid 적용하기(feat.자식요소)</h2>
+
+<blockquote>
+  <p>grid-column-start: 해당 셀의 시작 지점과 끝 지점을 지정하여 원하는 만큼 영역을 차지하도록 해줌.</p>
+</blockquote>
+
+<p class="notice--info"><strong>순서 나타내는 방법:</strong><br />
+앞에서 부터 1, 2, 3, 4로 세고, 뒤에서 부터는 -1, -2, -3, -4로 센다.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">.item2</span> <span class="p">{</span>
+    <span class="err">//한</span> <span class="err">번에</span> <span class="err">표현하면</span>
+    <span class="nl">grid-column</span><span class="p">:</span> <span class="m">2</span><span class="p">/</span><span class="m">4</span><span class="p">;</span>
+    <span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span><span class="p">/</span><span class="m">4</span><span class="p">;</span>
+    
+    <span class="err">//열의</span> <span class="err">시작과</span> <span class="err">끝을</span> <span class="err">나타낼</span> <span class="err">때</span>
+    <span class="py">grid-column-start</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+    <span class="py">grid-column-end</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+    
+    <span class="err">//행의</span> <span class="err">시작과</span> <span class="err">끝을</span> <span class="err">나타낼</span> <span class="err">때</span>
+    <span class="py">grid-row-start</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+    <span class="py">grid-row-end</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+    
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="grid-areas">grid areas</h2>
+
+<blockquote>
+  <p>grid-template-areas: 부모요소에서 레이아웃의 각 영역 이름을 설정하고, 그 이름을 자식요소에게 부여하여 영역을 조정하는 방식.</p>
+</blockquote>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+  <span class="o">//</span><span class="nt">부모요소</span>
+  <span class="nt">display</span><span class="o">:</span> <span class="nt">grid</span><span class="o">;</span>
+  <span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="err">3</span><span class="o">,</span> <span class="err">1</span><span class="nt">fr</span><span class="o">);</span>
+  <span class="nt">grid-auto-rows</span><span class="o">:</span> <span class="err">150</span><span class="nt">px</span><span class="o">;</span>
+  <span class="nt">grid-gap</span><span class="o">:</span><span class="err">1</span><span class="nt">rem</span><span class="o">;</span>
+  <span class="nt">grid-template-areas</span><span class="o">:</span>
+  <span class="s2">'a a a'</span>
+  <span class="s2">'b c c'</span>
+  <span class="s2">'b d g'</span>
+  <span class="s2">'e f g'</span>
+
+  <span class="o">//</span><span class="nt">자식요소</span>
+  <span class="o">//</span><span class="nt">value에</span> <span class="nt">따옴표</span> <span class="nt">붙이지</span> <span class="nt">않기</span><span class="o">!!</span>
+  <span class="nc">.image1</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">a</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image2</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image3</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">c</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image4</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">d</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image5</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">e</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image6</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">f</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.image7</span> <span class="p">{</span>
+    <span class="py">grid-area</span><span class="p">:</span> <span class="n">g</span><span class="p">;</span> 
+  <span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="reference">Reference</h2>
+<blockquote>
+  <p><a href="https://youtu.be/nxi1EXmPHRs">드림엘리 css grid 완전 정리</a></p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#css" class="page__taxonomy-item p-category" rel="tag">css</a><span class="sep">, </span>
+    
+      <a href="/tags/#grid" class="page__taxonomy-item p-category" rel="tag">grid</a><span class="sep">, </span>
+    
+      <a href="/tags/#study" class="page__taxonomy-item p-category" rel="tag">study</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#css" class="page__taxonomy-item p-category" rel="tag">CSS</a>
+    
+    </span>
+  </p>
+
+
+        
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=CSS+grid+layout%20http%3A%2F%2Flocalhost%3A4000%2F_posts%2F2022-09-06-css%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F_posts%2F2022-09-06-css%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F_posts%2F2022-09-06-css%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="griteach" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 griteach. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
