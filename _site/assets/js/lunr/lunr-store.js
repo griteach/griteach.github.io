@@ -11,6 +11,12 @@ var store = [{
         "url": "/goal/life/",
         "teaser": null
       },{
+        "title": "Recoil",
+        "excerpt":"Recoil   Recoil : 글로벌 state management. 다른 스크린들, 다른 컴포넌트들이 같은 state에 접근해야 할 때. 그 state의 값을 공유하며 다른 작업이 진행된다면 이 값은 반드시 공유되어야 한다. 그럴 때 Recoil을 사용하면 보다 쉽게 state를 공유할 수 있다.  ","categories": ["React"],
+        "tags": ["React","develop","study","recoil"],
+        "url": "/react/react-study-copy/",
+        "teaser": null
+      },{
         "title": "React basic",
         "excerpt":"Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용: outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 등록해두고 실제로 불러와야할 컴포넌트에서 &lt;Outlet /&gt;으로 삽입해준다. function Dashboard() { return ( &lt;div&gt; &lt;h1&gt;Dashboard&lt;/h1&gt; {/* This element...","categories": ["React"],
         "tags": ["React","develop","study"],
@@ -28,6 +34,9 @@ var store = [{
   },{
     "title": "목표",
     "excerpt":"2022 목표 리액트 스터디 노마드코더 리액트 마스터 과정 마무리 코인트래커 (~22.9.5.) github : coin-tracker-react State management 트렐로 클론 Animations 넷플릭스 클론 노마드코더 무료 강좌 전체 마무리 실전형 리액트 Hooks 10개 초보자를 위한 리덕스 101 Next JS 시작하기 (SSR을 강화시켜주는 React Framework) 최종적으로 SSR이 SEO에서 중요한 역할을 하기에, Next JS를 알아야...","url": "http://localhost:4000/_posts/2022-09-02-life/"
+  },{
+    "title": "Recoil",
+    "excerpt":"Recoil   Recoil : 글로벌 state management. 다른 스크린들, 다른 컴포넌트들이 같은 state에 접근해야 할 때. 그 state의 값을 공유하며 다른 작업이 진행된다면 이 값은 반드시 공유되어야 한다. 그럴 때 Recoil을 사용하면 보다 쉽게 state를 공유할 수 있다.  ","url": "http://localhost:4000/_posts/2022-09-02-react-study%20copy/"
   },{
     "title": "React basic",
     "excerpt":"Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용: outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 등록해두고 실제로 불러와야할 컴포넌트에서 &lt;Outlet /&gt;으로 삽입해준다. function Dashboard() { return ( &lt;div&gt; &lt;h1&gt;Dashboard&lt;/h1&gt; {/* This element...","url": "http://localhost:4000/_posts/2022-09-02-react-study/"
