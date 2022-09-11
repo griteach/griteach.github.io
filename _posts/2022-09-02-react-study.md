@@ -374,6 +374,13 @@ const location = useLocation();
 
 사용자가 선택한 URL에 들어가 있다면 Object를 돌려받고, 그 안에는 현재 url과 path, isExact:true가 들어있다. 원래대로라면. 허나 useMatch에서는 다른 값이 들어있다. 뭐 이걸로라도 현재 URL에 머물고 있는지 여부를 체크할 수 있다면 상관 없겠지. 만약 내가 해당 URL에 머물지 않는다면 null이 반환된다.
 
+## React Hook Form
+
+> [React Hook Form Docs](https://react-hook-form.com/)  
+
+register function은 onchange, validate, value 가져오기 등의 모든 것을 한 큐에 해결해준다.
+
+
 
 
 # React Query
