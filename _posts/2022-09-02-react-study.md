@@ -380,8 +380,30 @@ const location = useLocation();
 
 register function은 onchange, validate, value 가져오기 등의 모든 것을 한 큐에 해결해준다.
 
+```javascript
+import { useForm } from "react-hook-form";
 
+function Foo(){
+  
+  const { register, watch, handleSubmit } = useForm();
 
+  return <div>
+          <form>
+              <input {...register("toDo")}  placeholder="Write a to do" />
+          </form>
+          <button>Add</button>
+
+      </div>;
+
+}
+```
+register function 안에는 onChange, state 등 많은 것들이 이미 만들어져 있다. register를 콘솔로 찍어보면 다음과 같다. (문자열을 인수로 넣어줘야 한다.)
+
+```javascript
+{name: 'toDo', onChange: ƒ, onBlur: ƒ, ref: ƒ}
+```  
+onBlur는 포커스에 대한 것을 관리해 준다. onChange는 값의 변경을 감지해주고, name은 물론 이름이다.  
+이 register함수가 반환하는 객체를 가져다가 input에 props로 넣어준다. 이 때, `{...register("toDo")}`와 같이 구조 분해 할당해준다. watch는 input의 값의 변화를 실시간으로 관찰하여 state처럼 만들어준다.
 
 # React Query
 
@@ -389,7 +411,7 @@ register function은 onchange, validate, value 가져오기 등의 모든 것을
 [React Query Docs](https://tanstack.com/query/v4/docs/quick-start)
 {: .notice--info}
 
-**버전 문제 확인:"**  
+**버전 문제 확인:**  
 react 버전이 18이면 타입스크립트에서 react query를 못 불러옵니다
 npm i @tanstack/react-query 를 입력해서 모듈을 설치하면 react query불러오기가 가능해집니다
 
