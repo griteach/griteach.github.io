@@ -313,7 +313,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 분 소요
+          7 분 소요
         
       </span>
     
@@ -328,7 +328,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-square"></i> 차례</h4></header>
-              <ul class="toc__menu"><li><a href="#router">Router</a><ul><li><a href="#nested-router">Nested Router</a></li><li><a href="#link">Link</a></li></ul></li><li><a href="#components">Components</a><ul><li><a href="#components-return-해-주기">components return 해 주기</a></li></ul></li><li><a href="#style">Style</a><ul><li><a href="#reset-css">reset css</a></li><li><a href="#styled-components">styled-components</a><ul><li><a href="#createglobalstyle">createGlobalStyle</a></li><li><a href="#styled-reset">styled-reset</a></li><li><a href="#styled-components-안에-props-넣기">styled-components 안에 props 넣기</a></li></ul></li></ul></li><li><a href="#hooks">Hooks</a><ul><li><a href="#useparams">useParams</a></li><li><a href="#usestate">useState</a></li><li><a href="#uselocation">useLocation</a></li><li><a href="#usematch">useMatch</a></li><li><a href="#react-hook-form">React Hook Form</a></li></ul></li><li><a href="#react-query">React Query</a></li><li><a href="#etc">etc</a><ul><li><a href="#react-helmet">react-helmet</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#router">Router</a><ul><li><a href="#nested-router">Nested Router</a></li><li><a href="#link">Link</a></li></ul></li><li><a href="#components">Components</a><ul><li><a href="#components-return-해-주기">components return 해 주기</a></li></ul></li><li><a href="#style">Style</a><ul><li><a href="#reset-css">reset css</a></li><li><a href="#styled-components">styled-components</a><ul><li><a href="#createglobalstyle">createGlobalStyle</a></li><li><a href="#styled-reset">styled-reset</a></li><li><a href="#styled-components-안에-props-넣기">styled-components 안에 props 넣기</a></li></ul></li></ul></li><li><a href="#hooks">Hooks</a><ul><li><a href="#useparams">useParams</a></li><li><a href="#usestate">useState</a></li><li><a href="#uselocation">useLocation</a></li><li><a href="#usematch">useMatch</a></li><li><a href="#react-hook-form">React Hook Form</a><ul><li><a href="#register">register</a></li><li><a href="#watch">watch</a></li><li><a href="#handlesubmit">handleSubmit</a></li><li><a href="#formstate--">formState:{ … }</a></li></ul></li></ul></li><li><a href="#react-query">React Query</a></li><li><a href="#etc">etc</a><ul><li><a href="#react-helmet">react-helmet</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -675,6 +675,7 @@ a{
   <p><a href="https://react-hook-form.com/">React Hook Form Docs</a></p>
 </blockquote>
 
+<h3 id="register">register</h3>
 <p>register function은 onchange, validate, value 가져오기 등의 모든 것을 한 큐에 해결해준다.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useForm</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-hook-form</span><span class="dl">"</span><span class="p">;</span>
@@ -699,6 +700,60 @@ a{
 </code></pre></div></div>
 <p>onBlur는 포커스에 대한 것을 관리해 준다. onChange는 값의 변경을 감지해주고, name은 물론 이름이다.<br />
 이 register함수가 반환하는 객체를 가져다가 input에 props로 넣어준다. 이 때, <code class="language-plaintext highlighter-rouge">{...register("toDo")}</code>와 같이 구조 분해 할당해준다. watch는 input의 값의 변화를 실시간으로 관찰하여 state처럼 만들어준다.</p>
+
+<h3 id="watch">watch</h3>
+<p>watch는 값이 변동되는것을 실시간으로 감지하여 객체를 만들어준다. <del>vue에서 본 적 있지.</del> 로그로 찍어보면 인풋에 값이 들어올때마다 계속해서 출력되는 것을 볼 수 있다.</p>
+
+<h3 id="handlesubmit">handleSubmit</h3>
+<p class="notice--info"><a href="https://react-hook-form.com/api/useform/handlesubmit/">handleSubmit docs</a></p>
+
+<p>submit이 동작할 수 있도록 해주는 속성. validation 통과 했을 때 실행할 함수, 통과 못했을 때 실행할 함수를 만들어 두기. 나중에 살펴볼 formState나 error를 동작하게 해 주는 연결 통로의 느낌..?</p>
+
+<h3 id="formstate--">formState:{ … }</h3>
+<p class="notice--info"><a href="https://react-hook-form.com/api/useform/formstate">formState docs</a></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useForm</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-hook-form</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">FormInputs</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">email</span><span class="p">:</span> <span class="nx">string</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span>
+    <span class="nx">register</span><span class="p">,</span>
+    <span class="nx">handleSubmit</span><span class="p">,</span>
+    <span class="c1">// Read the formState before render to subscribe the form state through Proxy</span>
+    <span class="na">formState</span><span class="p">:</span> <span class="p">{</span> <span class="nx">errors</span><span class="p">,</span> <span class="nx">isDirty</span><span class="p">,</span> <span class="nx">isSubmitting</span><span class="p">,</span> <span class="nx">touchedFields</span><span class="p">,</span> <span class="nx">submitCount</span> <span class="p">},</span>
+  <span class="p">}</span> <span class="o">=</span> <span class="nx">useForm</span><span class="o">&lt;</span><span class="nx">FormInputs</span><span class="o">&gt;</span><span class="p">({</span>
+    <span class="na">defaultValues</span><span class="p">:{</span>
+      <span class="na">email</span><span class="p">:</span><span class="dl">"</span><span class="s2">@gmail.com</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+  <span class="kd">const</span> <span class="nx">onSubmit</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">:</span> <span class="nx">FormInputs</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">handleSubmit</span><span class="p">(</span><span class="nx">onSubmit</span><span class="p">)}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span> <span class="p">{...</span><span class="nx">register</span><span class="p">(</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nl">required</span><span class="p">:</span><span class="dl">"</span><span class="s2">This is required.</span><span class="dl">"</span><span class="p">,</span>
+        <span class="nx">minLength</span><span class="p">:{</span>
+          <span class="nl">value</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+          <span class="nx">message</span><span class="p">:</span><span class="dl">"</span><span class="s2">Your email is too short.</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="p">}}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">ErrorMessage</span> 
+          <span class="nx">errors</span><span class="o">=</span><span class="p">{</span><span class="nx">errors</span><span class="p">}</span> 
+          <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> 
+          <span class="nx">render</span><span class="o">=</span><span class="p">{</span>
+              <span class="p">({</span><span class="nx">message</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>              <span class="c1">//styled-components 사용해도 됨 ㅋㅋ</span>
+          <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">submit</span><span class="dl">"</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>FormInputs 인터페이스를 생성해준다. 인풋으로 받아올 데이터들의 타입과 이름을 정해준다. 디폴트값을 적용할 수도 있다. 에러메시지를 만들어두어야</p>
 
 <h1 id="react-query">React Query</h1>
 
