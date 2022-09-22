@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-14T22:31:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">Recoil - React를 위한 상태관리 라이브러리</title><link href="http://localhost:4000/react/recoil-react/" rel="alternate" type="text/html" title="Recoil - React를 위한 상태관리 라이브러리" /><published>2022-09-11T00:00:00+09:00</published><updated>2022-09-11T00:00:00+09:00</updated><id>http://localhost:4000/react/recoil-react</id><content type="html" xml:base="http://localhost:4000/react/recoil-react/"><![CDATA[<h1 id="recoil">Recoil</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-22T23:39:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">Recoil - React를 위한 상태관리 라이브러리</title><link href="http://localhost:4000/react/recoil-react/" rel="alternate" type="text/html" title="Recoil - React를 위한 상태관리 라이브러리" /><published>2022-09-11T00:00:00+09:00</published><updated>2022-09-11T00:00:00+09:00</updated><id>http://localhost:4000/react/recoil-react</id><content type="html" xml:base="http://localhost:4000/react/recoil-react/"><![CDATA[<h1 id="recoil">Recoil</h1>
 
 <blockquote>
   <p><a href="https://recoiljs.org/ko/">Recoil library</a></p>
@@ -18,14 +18,14 @@
 
 <p>recoil 상태를 사용하는 컴포넌트는 부모 트리 어딘가에 나타나는 <code class="language-plaintext highlighter-rouge">RecoilRoot</code>가 필요함. 루트 컴포넌트가 <code class="language-plaintext highlighter-rouge">RecoilRoot</code>를 넣기에 가장 좋다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span>
   <span class="nx">RecoilRoot</span><span class="p">,</span>
   <span class="nx">atom</span><span class="p">,</span>
   <span class="nx">selector</span><span class="p">,</span>
   <span class="nx">useRecoilState</span><span class="p">,</span>
   <span class="nx">useRecoilValue</span><span class="p">,</span>
-<span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">recoil</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">recoil</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span>
@@ -36,34 +36,99 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="atom">Atom</h2>
+<h2 id="atom">atom</h2>
 
 <p>Atom은 상태의 일부를 나타낸다. Atoms는 어떤 컴포넌트에서든 읽거나 쓸 수 있다. atom의 값을 읽는 컴포넌트들은 암묵적으로 atom을 구독한다. atom값의 변화를 감지 -&gt; 구독중인 모든 컴포넌트가 재 렌더링 되는 결과가 발생한다.</p>
 
 <p class="notice--primary"><strong>구독 → re렌더링:</strong><br />
 Atom의 값을 구독하고 있는 컴포넌트들은 Atom의 값이 변경되면 자동으로 re렌더링된다.</p>
 
-<h3 id="atom-생성">Atom 생성</h3>
+<h3 id="atom-생성">atom 생성</h3>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/atoms.ts atom 생성해두기</span>
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">isDarkAtom</span> <span class="o">=</span> <span class="nx">atom</span><span class="p">({</span>
-    <span class="na">key</span><span class="p">:</span><span class="dl">"</span><span class="s2">isDark</span><span class="dl">"</span><span class="p">,</span> <span class="c1">//unique ID</span>
-    <span class="na">default</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">//default value, initial value</span>
+  <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">isDark</span><span class="dl">"</span><span class="p">,</span> <span class="c1">//unique ID</span>
+  <span class="na">default</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">//default value, initial value</span>
 <span class="p">});</span>
 </code></pre></div></div>
-<h3 id="atom-사용하기">Atom 사용하기</h3>
+
+<h3 id="atom-사용하기">atom 사용하기</h3>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Chart.tsx 다른 컴포넌트에서 사용하기.</span>
 <span class="kd">const</span> <span class="nx">isDark</span> <span class="o">=</span> <span class="nx">useRecoilValue</span><span class="p">(</span><span class="nx">isDarkAtom</span><span class="p">);</span> <span class="c1">// import ..atoms.ts</span>
 </code></pre></div></div>
 
-<h3 id="atom-수정하기">Atom 수정하기</h3>
+<h3 id="atom-수정하기">atom 수정하기</h3>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">setIsDarkAtom</span> <span class="o">=</span> <span class="nx">useRecoilState</span><span class="p">(</span><span class="nx">isDarkAtom</span><span class="p">);</span> <span class="c1">//import ..atoms.ts</span>
-<span class="kd">const</span> <span class="nx">toggleDarkAtom</span> <span class="o">=</span> <span class="nx">setIsDarkAtom</span><span class="p">(</span><span class="nx">prev</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">prev</span><span class="p">);</span> <span class="c1">//boolean 뒤집기</span>
+<span class="kd">const</span> <span class="nx">toggleDarkAtom</span> <span class="o">=</span> <span class="nx">setIsDarkAtom</span><span class="p">((</span><span class="nx">prev</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">prev</span><span class="p">);</span> <span class="c1">//boolean 뒤집기</span>
 <span class="c1">//...</span>
-<span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">toggleDarkAtom</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">CHANGE</span><span class="o">!!&lt;</span><span class="sr">/button</span><span class="err">&gt;
+<span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">toggleDarkAtom</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">CHANGE</span><span class="o">!!&lt;</span><span class="sr">/button&gt;</span><span class="err">;
 </span></code></pre></div></div>
 
 <p class="notice--primary"><strong>useRecoilState:</strong>
-setState와 동일하게 사용된다. set할 때 기존 값을 가져와 작업해 주는 방식을 지향 <code class="language-plaintext highlighter-rouge">(prev =&gt; prev+1)</code></p>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="React" /><category term="React" /><category term="develop" /><category term="study" /><category term="recoil" /><summary type="html"><![CDATA[study #3]]></summary></entry><entry><title type="html">CSS grid layout</title><link href="http://localhost:4000/css/css/" rel="alternate" type="text/html" title="CSS grid layout" /><published>2022-09-06T00:00:00+09:00</published><updated>2022-09-06T00:00:00+09:00</updated><id>http://localhost:4000/css/css</id><content type="html" xml:base="http://localhost:4000/css/css/"><![CDATA[<h1 id="grid-layout">Grid layout</h1>
+setState와 동일하게 사용된다. set할 때 기존 값을 가져와 작업해 주는 방식을 지향 <code class="language-plaintext highlighter-rouge">(prev =&gt; prev+1)</code></p>
+
+<h2 id="selector">selector</h2>
+
+<p class="notice--info"><strong>selector:</strong><br />
+derived state: state를 입력받아서 그걸 변형한 후 다시 state를 반환한다. 변형된 스테이트. 기존의 스테이트를 필요한 방식으로 변형하여 반환할 수 있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">atom</span><span class="p">,</span> <span class="nx">selector</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">recoil</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">toDoSelector</span> <span class="o">=</span> <span class="nx">selector</span><span class="p">({</span>
+  <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">toDoSelelctor</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">get</span><span class="p">:</span> <span class="p">({</span> <span class="kd">get</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">toDos</span> <span class="o">=</span> <span class="kd">get</span><span class="p">(</span><span class="nx">toDoState</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">[</span>
+      <span class="nx">toDos</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">toDo</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">toDo</span><span class="p">.</span><span class="nx">category</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">TO_DO</span><span class="dl">"</span><span class="p">),</span>
+      <span class="nx">toDos</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">toDo</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">toDo</span><span class="p">.</span><span class="nx">category</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">DOING</span><span class="dl">"</span><span class="p">),</span>
+      <span class="nx">toDos</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">toDo</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">toDo</span><span class="p">.</span><span class="nx">category</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">DONE</span><span class="dl">"</span><span class="p">),</span>
+    <span class="p">];</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">get</code>이 있어야 다른 atom을 내부로 가져올 수 있다. <code class="language-plaintext highlighter-rouge">key</code>는 이름이라고 보면 되고.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Array.filter</code>를 활용하여 조건에 맞는 배열을 만들어 낸다. <code class="language-plaintext highlighter-rouge">filter</code>는 해당 조건에 맞지 않는 요소는 버리고 조건에 맞는 녀석들로만 배열을 만들어준다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ToDoList</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">//배열을 가져올 때는 아래와 같이 차례대로 입력해 주면 된다.</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">todo</span><span class="p">,</span> <span class="nx">doing</span><span class="p">,</span> <span class="nx">done</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useRecoilValue</span><span class="p">(</span><span class="nx">toDoSelector</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">ToDos</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">hr</span><span class="o">&gt;&lt;</span><span class="sr">/hr</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">CreateToDo</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">ToDo</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">todo</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">toDo</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">ToDo</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">toDo</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span> <span class="p">{...</span><span class="nx">toDo</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="p">))}</span>
+      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">hr</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Doing</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">doing</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">toDo</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">ToDo</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">toDo</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span> <span class="p">{...</span><span class="nx">toDo</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="p">))}</span>
+      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">hr</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Done</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">done</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">toDo</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">ToDo</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">toDo</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span> <span class="p">{...</span><span class="nx">toDo</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="p">))}</span>
+      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">hr</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>state를 가져와서 원본은 유지한채로 변형시킨 state를 만들어서 반환한다. 즉, 원본은 바꾸지 않고 내가 원하는 방식대로 변환하여 사용하는 것이 핵심 포인트.</p>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="React" /><category term="React" /><category term="develop" /><category term="study" /><category term="recoil" /><summary type="html"><![CDATA[study #3]]></summary></entry><entry><title type="html">CSS grid layout</title><link href="http://localhost:4000/css/css/" rel="alternate" type="text/html" title="CSS grid layout" /><published>2022-09-06T00:00:00+09:00</published><updated>2022-09-06T00:00:00+09:00</updated><id>http://localhost:4000/css/css</id><content type="html" xml:base="http://localhost:4000/css/css/"><![CDATA[<h1 id="grid-layout">Grid layout</h1>
 
 <h2 id="flex와의-차이">Flex와의 차이</h2>
 <p class="notice--info"><strong>Flex layout:</strong><br />
@@ -257,6 +322,7 @@ setState와 동일하게 사용된다. set할 때 기존 값을 가져와 작업
 원하는 곳에 뿌려주는 용도.</p>
 
 <h2 id="nested-router">Nested Router</h2>
+
 <p>라우터 안의 라우터
 웹사이트에서 탭을 사용할 때 도움이 된다.
 섹션이 나눠졌을 때도 만들 수 있지.</p>
@@ -281,10 +347,7 @@ outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 �
   <span class="k">return</span> <span class="p">(</span>
     <span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Dashboard</span> <span class="o">/&gt;</span><span class="p">}</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">Route</span>
-          <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">messages</span><span class="dl">"</span>
-          <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">DashboardMessages</span> <span class="o">/&gt;</span><span class="p">}</span>
-        <span class="sr">/</span><span class="err">&gt;
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">messages</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">DashboardMessages</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">tasks</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">DashboardTasks</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>      <span class="o">&lt;</span><span class="sr">/Route</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="sr">/Routes</span><span class="err">&gt;
@@ -303,28 +366,32 @@ outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 �
 
 <h2 id="components-return-해-주기">components return 해 주기</h2>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="c1">//배열에 대한 map을 활용하여 반복된 리스트 출력해주기.</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//배열에 대한 map을 활용하여 반복된 리스트 출력해주기.</span>
 <span class="c1">//여기에서는 Coin 컴포넌트를 map으로 호출하여 반복 출력해주고 있다.</span>
 <span class="o">&lt;</span><span class="nx">Container</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">Header</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">Title</span><span class="o">&gt;</span><span class="nx">Coins</span><span class="o">&lt;</span><span class="sr">/Title</span><span class="err">&gt;
-</span>        <span class="o">&lt;</span><span class="sr">/Header</span><span class="err">&gt;
-</span>        <span class="p">{</span><span class="nx">loading</span><span class="p">?</span> <span class="o">&lt;</span><span class="nx">Loader</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/Loader&gt; : &lt;CoinsList</span><span class="err">&gt;
-</span>            <span class="p">{</span><span class="nx">coins</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">coin</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">Coin</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
-                <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
-                    <span class="o">&lt;</span><span class="nx">CoinWrapper</span><span class="o">&gt;</span>
-                        <span class="o">&lt;</span><span class="nx">Img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">`https://cryptocurrencyliveprices.com/img/</span><span class="p">${</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">.png`</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
-</span>                        <span class="p">{</span><span class="nx">coin</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="o">&amp;</span><span class="nx">rarr</span><span class="p">;</span>
-                    <span class="o">&lt;</span><span class="sr">/CoinWrapper&gt;       </span><span class="err"> 
-</span>                <span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
-</span>                    
-                <span class="o">&lt;</span><span class="sr">/Coin&gt;</span><span class="se">)</span><span class="err">}
-</span>        <span class="o">&lt;</span><span class="sr">/CoinsList&gt;</span><span class="err">}
-</span>        
-    <span class="o">&lt;</span><span class="sr">/Container</span><span class="err">&gt;
-</span>
-</code></pre></div></div>
+  <span class="o">&lt;</span><span class="nx">Header</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Title</span><span class="o">&gt;</span><span class="nx">Coins</span><span class="o">&lt;</span><span class="sr">/Title</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/Header</span><span class="err">&gt;
+</span>  <span class="p">{</span><span class="nx">loading</span> <span class="p">?</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Loader</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/Loader</span><span class="err">&gt;
+</span>  <span class="p">)</span> <span class="p">:</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">CoinsList</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">coins</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">coin</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">Coin</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">CoinWrapper</span><span class="o">&gt;</span>
+              <span class="o">&lt;</span><span class="nx">Img</span>
+                <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">`https://cryptocurrencyliveprices.com/img/</span><span class="p">${</span><span class="nx">coin</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">.png`</span><span class="p">}</span>
+              <span class="sr">/</span><span class="err">&gt;
+</span>              <span class="p">{</span><span class="nx">coin</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="o">&amp;</span><span class="nx">rarr</span><span class="p">;</span>
+            <span class="o">&lt;</span><span class="sr">/CoinWrapper</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/Coin</span><span class="err">&gt;
+</span>      <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="sr">/CoinsList</span><span class="err">&gt;
+</span>  <span class="p">)}</span>
+<span class="o">&lt;</span><span class="sr">/Container</span><span class="err">&gt;
+</span></code></pre></div></div>
 
 <h1 id="style">Style</h1>
 
@@ -338,48 +405,129 @@ outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 �
    License: none (public domain)
 */</span>
 
-<span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">applet</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span>
-<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span>
-<span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">big</span><span class="o">,</span> <span class="nt">cite</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span>
-<span class="nt">del</span><span class="o">,</span> <span class="nt">dfn</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">img</span><span class="o">,</span> <span class="nt">ins</span><span class="o">,</span> <span class="nt">kbd</span><span class="o">,</span> <span class="nt">q</span><span class="o">,</span> <span class="nt">s</span><span class="o">,</span> <span class="nt">samp</span><span class="o">,</span>
-<span class="nt">small</span><span class="o">,</span> <span class="nt">strike</span><span class="o">,</span> <span class="nt">strong</span><span class="o">,</span> <span class="nt">sub</span><span class="o">,</span> <span class="nt">sup</span><span class="o">,</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">var</span><span class="o">,</span>
-<span class="nt">b</span><span class="o">,</span> <span class="nt">u</span><span class="o">,</span> <span class="nt">i</span><span class="o">,</span> <span class="nt">center</span><span class="o">,</span>
-<span class="nt">dl</span><span class="o">,</span> <span class="nt">dt</span><span class="o">,</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span>
-<span class="nt">fieldset</span><span class="o">,</span> <span class="nt">form</span><span class="o">,</span> <span class="nt">label</span><span class="o">,</span> <span class="nt">legend</span><span class="o">,</span>
-<span class="nt">table</span><span class="o">,</span> <span class="nt">caption</span><span class="o">,</span> <span class="nt">tbody</span><span class="o">,</span> <span class="nt">tfoot</span><span class="o">,</span> <span class="nt">thead</span><span class="o">,</span> <span class="nt">tr</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span><span class="o">,</span>
-<span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">canvas</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span> 
-<span class="nt">figure</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> 
-<span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">output</span><span class="o">,</span> <span class="nt">ruby</span><span class="o">,</span> <span class="nt">section</span><span class="o">,</span> <span class="nt">summary</span><span class="o">,</span>
-<span class="nt">time</span><span class="o">,</span> <span class="nt">mark</span><span class="o">,</span> <span class="nt">audio</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>
-	<span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-	<span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-	<span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-	<span class="nl">font-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-	<span class="nl">font</span><span class="p">:</span> <span class="nb">inherit</span><span class="p">;</span>
-	<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">baseline</span><span class="p">;</span>
+<span class="nt">html</span><span class="o">,</span>
+<span class="nt">body</span><span class="o">,</span>
+<span class="nt">div</span><span class="o">,</span>
+<span class="nt">span</span><span class="o">,</span>
+<span class="nt">applet</span><span class="o">,</span>
+<span class="nt">object</span><span class="o">,</span>
+<span class="nt">iframe</span><span class="o">,</span>
+<span class="nt">h1</span><span class="o">,</span>
+<span class="nt">h2</span><span class="o">,</span>
+<span class="nt">h3</span><span class="o">,</span>
+<span class="nt">h4</span><span class="o">,</span>
+<span class="nt">h5</span><span class="o">,</span>
+<span class="nt">h6</span><span class="o">,</span>
+<span class="nt">p</span><span class="o">,</span>
+<span class="nt">blockquote</span><span class="o">,</span>
+<span class="nt">pre</span><span class="o">,</span>
+<span class="nt">a</span><span class="o">,</span>
+<span class="nt">abbr</span><span class="o">,</span>
+<span class="nt">acronym</span><span class="o">,</span>
+<span class="nt">address</span><span class="o">,</span>
+<span class="nt">big</span><span class="o">,</span>
+<span class="nt">cite</span><span class="o">,</span>
+<span class="nt">code</span><span class="o">,</span>
+<span class="nt">del</span><span class="o">,</span>
+<span class="nt">dfn</span><span class="o">,</span>
+<span class="nt">em</span><span class="o">,</span>
+<span class="nt">img</span><span class="o">,</span>
+<span class="nt">ins</span><span class="o">,</span>
+<span class="nt">kbd</span><span class="o">,</span>
+<span class="nt">q</span><span class="o">,</span>
+<span class="nt">s</span><span class="o">,</span>
+<span class="nt">samp</span><span class="o">,</span>
+<span class="nt">small</span><span class="o">,</span>
+<span class="nt">strike</span><span class="o">,</span>
+<span class="nt">strong</span><span class="o">,</span>
+<span class="nt">sub</span><span class="o">,</span>
+<span class="nt">sup</span><span class="o">,</span>
+<span class="nt">tt</span><span class="o">,</span>
+<span class="nt">var</span><span class="o">,</span>
+<span class="nt">b</span><span class="o">,</span>
+<span class="nt">u</span><span class="o">,</span>
+<span class="nt">i</span><span class="o">,</span>
+<span class="nt">center</span><span class="o">,</span>
+<span class="nt">dl</span><span class="o">,</span>
+<span class="nt">dt</span><span class="o">,</span>
+<span class="nt">dd</span><span class="o">,</span>
+<span class="nt">ol</span><span class="o">,</span>
+<span class="nt">ul</span><span class="o">,</span>
+<span class="nt">li</span><span class="o">,</span>
+<span class="nt">fieldset</span><span class="o">,</span>
+<span class="nt">form</span><span class="o">,</span>
+<span class="nt">label</span><span class="o">,</span>
+<span class="nt">legend</span><span class="o">,</span>
+<span class="nt">table</span><span class="o">,</span>
+<span class="nt">caption</span><span class="o">,</span>
+<span class="nt">tbody</span><span class="o">,</span>
+<span class="nt">tfoot</span><span class="o">,</span>
+<span class="nt">thead</span><span class="o">,</span>
+<span class="nt">tr</span><span class="o">,</span>
+<span class="nt">th</span><span class="o">,</span>
+<span class="nt">td</span><span class="o">,</span>
+<span class="nt">article</span><span class="o">,</span>
+<span class="nt">aside</span><span class="o">,</span>
+<span class="nt">canvas</span><span class="o">,</span>
+<span class="nt">details</span><span class="o">,</span>
+<span class="nt">embed</span><span class="o">,</span>
+<span class="nt">figure</span><span class="o">,</span>
+<span class="nt">figcaption</span><span class="o">,</span>
+<span class="nt">footer</span><span class="o">,</span>
+<span class="nt">header</span><span class="o">,</span>
+<span class="nt">hgroup</span><span class="o">,</span>
+<span class="nt">menu</span><span class="o">,</span>
+<span class="nt">nav</span><span class="o">,</span>
+<span class="nt">output</span><span class="o">,</span>
+<span class="nt">ruby</span><span class="o">,</span>
+<span class="nt">section</span><span class="o">,</span>
+<span class="nt">summary</span><span class="o">,</span>
+<span class="nt">time</span><span class="o">,</span>
+<span class="nt">mark</span><span class="o">,</span>
+<span class="nt">audio</span><span class="o">,</span>
+<span class="nt">video</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="nb">inherit</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">baseline</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="c">/* HTML5 display-role reset for older browsers */</span>
-<span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">figure</span><span class="o">,</span> 
-<span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> <span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span>
-	<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="nt">article</span><span class="o">,</span>
+<span class="nt">aside</span><span class="o">,</span>
+<span class="nt">details</span><span class="o">,</span>
+<span class="nt">figcaption</span><span class="o">,</span>
+<span class="nt">figure</span><span class="o">,</span>
+<span class="nt">footer</span><span class="o">,</span>
+<span class="nt">header</span><span class="o">,</span>
+<span class="nt">hgroup</span><span class="o">,</span>
+<span class="nt">menu</span><span class="o">,</span>
+<span class="nt">nav</span><span class="o">,</span>
+<span class="nt">section</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">body</span> <span class="p">{</span>
-	<span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span> <span class="p">{</span>
-	<span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="nt">ol</span><span class="o">,</span>
+<span class="nt">ul</span> <span class="p">{</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nt">blockquote</span><span class="o">,</span> <span class="nt">q</span> <span class="p">{</span>
-	<span class="nl">quotes</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="nt">blockquote</span><span class="o">,</span>
+<span class="nt">q</span> <span class="p">{</span>
+  <span class="nl">quotes</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nt">blockquote</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">blockquote</span><span class="nd">:after</span><span class="o">,</span>
-<span class="nt">q</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">q</span><span class="nd">:after</span> <span class="p">{</span>
-	<span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
-	<span class="nl">content</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="nt">blockquote</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nt">blockquote</span><span class="nd">:after</span><span class="o">,</span>
+<span class="nt">q</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nt">q</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">table</span> <span class="p">{</span>
-	<span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">collapse</span><span class="p">;</span>
-	<span class="nl">border-spacing</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">collapse</span><span class="p">;</span>
+  <span class="nl">border-spacing</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -387,31 +535,32 @@ outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 �
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Header</span>
 <span class="kd">const</span> <span class="nx">Header</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
-    height:10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `</span><span class="p">;</span>
 
 <span class="c1">//Coin List</span>
 <span class="kd">const</span> <span class="nx">Coin</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">li</span><span class="s2">`
-    background-color: white;
-    color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">}</span><span class="s2">;
-    
-    border-radius: 20px;
-    margin-bottom: 15px;
-    a{
-        padding: 20px;
-        transition: color 0.2s ease-in;
-        display: block;
+  background-color: white;
+  color: </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">}</span><span class="s2">;
+
+  border-radius: 20px;
+  margin-bottom: 15px;
+  a {
+    padding: 20px;
+    transition: color 0.2s ease-in;
+    display: block;
+  }
+  &amp;:hover {
+    a {
+      color: </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">accentColor</span><span class="p">}</span><span class="s2">;
     }
-    &amp;:hover{
-        a{
-            color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">accentColor</span><span class="p">}</span><span class="s2">;
-        }
-    }
+  }
 `</span><span class="p">;</span>
 </code></pre></div></div>
+
 <p>컴포넌트마다 따로 스타일을 지정해 줄 수 있음. 이렇게 지정해 둔 스타일은 컴포넌트를 불러올 때마다 적용되기 때문에 리액트가 추구하는 방식에 참 어울린다는 생각이.. 기존 css에서 사용하던 모든 방식을 styled-components로도 대부분 사용할 수 있다.</p>
 
 <h3 id="createglobalstyle">createGlobalStyle</h3>
@@ -422,7 +571,7 @@ outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 �
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//App.tsx</span>
 
 <span class="c1">//임포트</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">createGlobalStyle</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">createGlobalStyle</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">styled-components</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="c1">//styled-components 생성 (feat. rest css)</span>
 <span class="kd">const</span> <span class="nx">GlobalStyle</span> <span class="o">=</span> <span class="nx">createGlobalStyle</span><span class="s2">`
@@ -453,8 +602,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  background-color: </span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">}</span><span class="s2">;
-  color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">textColor</span><span class="p">}</span><span class="s2">;
+  background-color: </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">}</span><span class="s2">;
+  color:</span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">textColor</span><span class="p">}</span><span class="s2">;
 }
 ol, ul {
 	list-style: none;
@@ -482,13 +631,13 @@ a{
 }
 `</span><span class="p">;</span>
 
-
 <span class="c1">//app 생성</span>
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span><span class="o">&lt;&gt;</span>
-    <span class="o">&lt;</span><span class="nx">GlobalStyle</span> <span class="o">/&gt;</span>
-    <span class="o">&lt;</span><span class="nx">Router</span> <span class="o">/&gt;</span>
-    <span class="o">&lt;</span><span class="nx">ReactQueryDevtools</span> <span class="nx">initialIsOpen</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">GlobalStyle</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Router</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ReactQueryDevtools</span> <span class="nx">initialIsOpen</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
 </span>  <span class="p">);</span>
 <span class="p">}</span>
@@ -497,6 +646,7 @@ a{
 <p>이 컴포넌트는 렌더링 한 후에 전역 스코프에 스타일을 올려준다. 단독으로 적용되는 것이 아니라 전체, 글로벌로 적용.</p>
 
 <h3 id="styled-reset">styled-reset</h3>
+
 <p class="notice--info"><strong>styled-reset:</strong><br />
 한 번에 reset css 만들어 줌.</p>
 
@@ -504,9 +654,11 @@ a{
 
 <h3 id="styled-components-안에-props-넣기">styled-components 안에 props 넣기</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="c1">//isActive라는 props를 세팅해주고.</span>
-<span class="kd">const</span> <span class="nx">Tab</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">span</span><span class="o">&lt;</span><span class="p">{</span><span class="na">isActive</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">}</span><span class="o">&gt;</span><span class="s2">`
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//isActive라는 props를 세팅해주고.</span>
+<span class="kd">const</span> <span class="nx">Tab</span> <span class="o">=</span>
+  <span class="nx">styled</span><span class="p">.</span><span class="nx">span</span> <span class="o">&lt;</span>
+  <span class="p">{</span> <span class="na">isActive</span><span class="p">:</span> <span class="nx">boolean</span> <span class="p">}</span> <span class="o">&gt;</span>
+  <span class="s2">`
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;
@@ -518,21 +670,22 @@ a{
     }
     
     // 스타일 세팅 할 때 props를 가져다가 사용하기. 삼항연산자는 거의 밥먹듯이 사용.
-    color:</span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">isActive</span> <span class="p">?</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">accentColor</span> <span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">textColor</span><span class="p">}</span><span class="s2">;
+    color:</span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span>
+      <span class="nx">props</span><span class="p">.</span><span class="nx">isActive</span> <span class="p">?</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">accentColor</span> <span class="p">:</span> <span class="nx">props</span><span class="p">.</span><span class="nx">theme</span><span class="p">.</span><span class="nx">textColor</span><span class="p">}</span><span class="s2">;
 `</span><span class="p">;</span>
 
 <span class="c1">//실제 사용 장면</span>
 <span class="o">&lt;</span><span class="nx">Tabs</span><span class="o">&gt;</span>
-    <span class="c1">// styled-components를 사용할 때 props를 넣어주는 모습. 값을 다이렉트로 넣을 수도 있고, js를 이용하여 로직을 넣을 수도 있다.</span>
-    <span class="o">&lt;</span><span class="nx">Tab</span> <span class="nx">isActive</span><span class="o">=</span><span class="p">{</span><span class="nx">chartMatch</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">}</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coinId</span><span class="p">}</span><span class="s2">/chart`</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Chart</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="sr">/Tab</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="nx">Tab</span> <span class="nx">isActive</span><span class="o">=</span><span class="p">{</span><span class="nx">priceMatch</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">}</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coinId</span><span class="p">}</span><span class="s2">/price`</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Price</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="sr">/Tab</span><span class="err">&gt;
-</span><span class="o">&lt;</span><span class="sr">/Tabs</span><span class="err">&gt;
-</span>
-</code></pre></div></div>
+  <span class="c1">// styled-components를 사용할 때 props를 넣어주는 모습. 값을 다이렉트로 넣을</span>
+  <span class="nx">수도</span> <span class="nx">있고</span><span class="p">,</span> <span class="nx">js를</span> <span class="nx">이용하여</span> <span class="nx">로직을</span> <span class="nx">넣을</span> <span class="nx">수도</span> <span class="nx">있다</span><span class="p">.</span>
+  <span class="o">&lt;</span><span class="nx">Tab</span> <span class="nx">isActive</span><span class="o">=</span><span class="p">{</span><span class="nx">chartMatch</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coinId</span><span class="p">}</span><span class="s2">/chart`</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Chart</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/Tab</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">Tab</span> <span class="nx">isActive</span><span class="o">=</span><span class="p">{</span><span class="nx">priceMatch</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="s2">`/</span><span class="p">${</span><span class="nx">coinId</span><span class="p">}</span><span class="s2">/price`</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Price</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/Tab</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/Tabs&gt;</span><span class="err">;
+</span></code></pre></div></div>
 
 <h1 id="hooks">Hooks</h1>
 
@@ -594,41 +747,47 @@ a{
 </blockquote>
 
 <h3 id="register">register</h3>
+
 <p>register function은 onchange, validate, value 가져오기 등의 모든 것을 한 큐에 해결해준다.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useForm</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-hook-form</span><span class="dl">"</span><span class="p">;</span>
 
-<span class="kd">function</span> <span class="nx">Foo</span><span class="p">(){</span>
-  
+<span class="kd">function</span> <span class="nx">Foo</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="p">{</span> <span class="nx">register</span><span class="p">,</span> <span class="nx">watch</span><span class="p">,</span> <span class="nx">handleSubmit</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useForm</span><span class="p">();</span>
 
-  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-          <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
-              <span class="o">&lt;</span><span class="nx">input</span> <span class="p">{...</span><span class="nx">register</span><span class="p">(</span><span class="dl">"</span><span class="s2">toDo</span><span class="dl">"</span><span class="p">)}</span>  <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Write a to do</span><span class="dl">"</span> <span class="o">/&gt;</span>
-          <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
-</span>          <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">Add</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>
-      <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
-</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">form</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">input</span> <span class="p">{...</span><span class="nx">register</span><span class="p">(</span><span class="dl">"</span><span class="s2">toDo</span><span class="dl">"</span><span class="p">)}</span> <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Write a to do</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">Add</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
 <p>register function 안에는 onChange, state 등 많은 것들이 이미 만들어져 있다. register를 콘솔로 찍어보면 다음과 같다. (문자열을 인수로 넣어줘야 한다.)</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">toDo</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onChange</span><span class="p">:</span> <span class="nx">ƒ</span><span class="p">,</span> <span class="nx">onBlur</span><span class="p">:</span> <span class="nx">ƒ</span><span class="p">,</span> <span class="nx">ref</span><span class="p">:</span> <span class="nx">ƒ</span><span class="p">}</span>
 </code></pre></div></div>
+
 <p>onBlur는 포커스에 대한 것을 관리해 준다. onChange는 값의 변경을 감지해주고, name은 물론 이름이다.<br />
 이 register함수가 반환하는 객체를 가져다가 input에 props로 넣어준다. 이 때, <code class="language-plaintext highlighter-rouge">{...register("toDo")}</code>와 같이 구조 분해 할당해준다. watch는 input의 값의 변화를 실시간으로 관찰하여 state처럼 만들어준다.</p>
 
 <h3 id="watch">watch</h3>
+
 <p>watch는 값이 변동되는것을 실시간으로 감지하여 객체를 만들어준다. <del>vue에서 본 적 있지.</del> 로그로 찍어보면 인풋에 값이 들어올때마다 계속해서 출력되는 것을 볼 수 있다.</p>
 
 <h3 id="handlesubmit">handleSubmit</h3>
+
 <p class="notice--info"><a href="https://react-hook-form.com/api/useform/handlesubmit/">handleSubmit docs</a></p>
 
-<p>submit이 동작할 수 있도록 해주는 속성. validation 통과 했을 때 실행할 함수, 통과 못했을 때 실행할 함수를 만들어 두기. 나중에 살펴볼 formState나 error를 동작하게 해 주는 연결 통로의 느낌..?</p>
+<p>submit이 동작할 수 있도록 해주는 속성. 데이터가 유효할 때 동작하는 함수를 만들어서 집어넣어준다.</p>
 
 <h3 id="formstate--">formState:{ … }</h3>
+
 <p class="notice--info"><a href="https://react-hook-form.com/api/useform/formstate">formState docs</a></p>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">useForm</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-hook-form</span><span class="dl">"</span><span class="p">;</span>
 
@@ -658,9 +817,9 @@ a{
           <span class="nx">message</span><span class="p">:</span><span class="dl">"</span><span class="s2">Your email is too short.</span><span class="dl">"</span><span class="p">,</span>
         <span class="p">}</span>
         <span class="p">}}</span> <span class="sr">/</span><span class="err">&gt;
-</span>      <span class="o">&lt;</span><span class="nx">ErrorMessage</span> 
-          <span class="nx">errors</span><span class="o">=</span><span class="p">{</span><span class="nx">errors</span><span class="p">}</span> 
-          <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span> 
+</span>      <span class="o">&lt;</span><span class="nx">ErrorMessage</span>
+          <span class="nx">errors</span><span class="o">=</span><span class="p">{</span><span class="nx">errors</span><span class="p">}</span>
+          <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span>
           <span class="nx">render</span><span class="o">=</span><span class="p">{</span>
               <span class="p">({</span><span class="nx">message</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">message</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
 </span>              <span class="c1">//styled-components 사용해도 됨 ㅋㅋ</span>
@@ -671,6 +830,7 @@ a{
 <span class="p">}</span>
 
 </code></pre></div></div>
+
 <p>FormInputs 인터페이스를 생성해준다. 인풋으로 받아올 데이터들의 타입과 이름을 정해준다. 디폴트값을 적용할 수도 있다. 에러메시지를 만들어두어야</p>
 
 <h1 id="react-query">React Query</h1>
@@ -696,7 +856,7 @@ npm i @tanstack/react-query 를 입력해서 모듈을 설치하면 react query�
   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span> <span class="k">as</span> <span class="nx">HTMLElement</span>
 <span class="p">);</span>
 <span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-  
+
   <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
   <span class="c1">//QueryClientProvider 감싸기</span>
   <span class="c1">//props는 client={queryClient}로 넣어주기(필수)</span>
@@ -707,7 +867,7 @@ npm i @tanstack/react-query 를 입력해서 모듈을 설치하면 react query�
       <span class="o">&lt;</span><span class="sr">/ThemeProvider</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="sr">/QueryClientProvider</span><span class="err">&gt;
 </span>  <span class="o">&lt;</span><span class="sr">/React.StrictMode</span><span class="err">&gt;
-</span>  
+</span>
 <span class="p">);</span>
 </code></pre></div></div>
 
@@ -733,8 +893,8 @@ fetcher 함수 만들기. (fetch)함수와 더불어 json이라든지 state에 �
 <p>예를 들어서 다음과 같은 코드가 있다고 가정해봅시다.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">animal</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">개</span><span class="dl">'</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">멍멍이</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">개</span><span class="dl">"</span><span class="p">,</span>
 <span class="p">};</span>
 
 <span class="kd">const</span> <span class="nx">nickname</span> <span class="o">=</span> <span class="nx">animal</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
@@ -747,11 +907,11 @@ fetcher 함수 만들기. (fetch)함수와 더불어 json이라든지 state에 �
 <p>이러한 상황에서는 : 문자를 사용해서 이름을 바꿔줄 수 있습니다.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">animal</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">멍멍이</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">개</span><span class="dl">'</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">멍멍이</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">개</span><span class="dl">"</span><span class="p">,</span>
 <span class="p">};</span>
 
-<span class="kd">const</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="nx">nickname</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">animal</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="nx">nickname</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">animal</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nickname</span><span class="p">);</span>
 </code></pre></div></div>
 
@@ -768,7 +928,7 @@ fetcher 함수 만들기. (fetch)함수와 더불어 json이라든지 state에 �
 <span class="c1">//타이틀 뿐 아니라 css, favicon등등 모두 가능</span>
 <span class="c1">//js로 로직을 넣을 수도 있으니 상황에 따라 필요한 데이터를 전달할 수 있다.</span>
 <span class="o">&lt;</span><span class="nx">Helmet</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Coins</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+  <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Coins</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="sr">/Helmet</span><span class="err">&gt;
 </span></code></pre></div></div>
 
