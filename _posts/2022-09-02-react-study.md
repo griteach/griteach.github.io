@@ -9,6 +9,24 @@ tags:
   - study
 ---
 
+# React Settings
+
+## 초기 설치
+
+**CRA with typescript:**  
+npx create-react-app my-app --template typescript
+{: .notice--info}
+
+**styled-components:**  
+npm i styled-components  
+->  
+npm i --save-dev @types/styled-components
+{: .notice--info}
+
+**recoil:**  
+npm i recoil  
+{: .notice--info}
+
 # Router
 
 **Router:**  

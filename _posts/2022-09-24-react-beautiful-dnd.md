@@ -1,20 +1,21 @@
 ---
-title: "Recoil - React를 위한 상태관리 라이브러리"
-excerpt: "study #3"
+title: "Drag and Drop with (rbd)"
+excerpt: "study #4"
 categories:
   - React
 tags:
   - React
   - develop
   - study
-  - recoil
+  - rbd
+  - drag and drop
 ---
 
-# Recoil
+# React beautiful dnd (rbd)
 
-> [Recoil library](https://recoiljs.org/ko/)
+> [RBD library](https://www.npmjs.com/package/react-beautiful-dnd)
 
-**Global State:**  
+**RBD:**  
 어플리케이션이 특정 value에 접근해야 할 때 사용. 어떤 컴포넌트이든, 어떤 위치에 있든 특정 value에 접근하기 위해서는 global state상태여야 함.
 {: notice--info}
 
@@ -26,7 +27,7 @@ tags:
 ## 설치
 
 **install:**  
-`npm install recoil`
+`npm i react-beautiful-dnd`
 {: .notice--info}
 
 recoil 상태를 사용하는 컴포넌트는 부모 트리 어딘가에 나타나는 `RecoilRoot`가 필요함. 루트 컴포넌트가 `RecoilRoot`를 넣기에 가장 좋다.

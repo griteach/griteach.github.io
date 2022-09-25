@@ -12,7 +12,7 @@ var store = [{
         "teaser": null
       },{
         "title": "React basic",
-        "excerpt":"Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용: outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 등록해두고 실제로 불러와야할 컴포넌트에서 &lt;Outlet /&gt;으로 삽입해준다. function Dashboard() { return ( &lt;div&gt; &lt;h1&gt;Dashboard&lt;/h1&gt; {/* This element...","categories": ["React"],
+        "excerpt":"React Settings 초기 설치 CRA with typescript: npx create-react-app my-app –template typescript styled-components: npm i styled-components -&gt; npm i –save-dev @types/styled-components recoil: npm i recoil Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용:...","categories": ["React"],
         "tags": ["React","develop","study"],
         "url": "/react/react-study/",
         "teaser": null
@@ -29,6 +29,12 @@ var store = [{
         "url": "/react/recoil-react/",
         "teaser": null
       },{
+        "title": "Drag and Drop with (rbd)",
+        "excerpt":"React beautiful dnd (rbd) RBD library RBD: 어플리케이션이 특정 value에 접근해야 할 때 사용. 어떤 컴포넌트이든, 어떤 위치에 있든 특정 value에 접근하기 위해서는 global state상태여야 함. Recoil : global state management. 다른 스크린들, 다른 컴포넌트들이 같은 state에 접근해야 할 때. 그 state의 값을 공유하며 다른 작업이 진행된다면 이 값은 반드시...","categories": ["React"],
+        "tags": ["React","develop","study","rbd","drag and drop"],
+        "url": "/react/react-beautiful-dnd/",
+        "teaser": null
+      },{
     "title": "마크다운 #1",
     "excerpt":"NOTICE 🔅 Notice: 기본적인 노티스 ⚡️ Primary: 중요한 노티스 🚦 Info: 정보 노티스 ⛔️ Warning: 경고 노티스 ❌ Danger: Danger 노티스 ✅ Success: Success 노티스 하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. {: .notice--&lt;primary | info | warning | danger | success &gt;}...","url": "http://localhost:4000/_posts/2022-09-01-markdown-1/"
   },{
@@ -36,13 +42,16 @@ var store = [{
     "excerpt":"2022 목표 리액트 스터디 노마드코더 리액트 마스터 과정 마무리 코인트래커 (~22.9.5.) github : coin-tracker-react State management 트렐로 클론 Animations 넷플릭스 클론 노마드코더 무료 강좌 전체 마무리 실전형 리액트 Hooks 10개 초보자를 위한 리덕스 101 Next JS 시작하기 (SSR을 강화시켜주는 React Framework) 최종적으로 SSR이 SEO에서 중요한 역할을 하기에, Next JS를 알아야...","url": "http://localhost:4000/_posts/2022-09-02-life/"
   },{
     "title": "React basic",
-    "excerpt":"Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용: outlet을 활용하여 전체 Router에 필요한 컴포넌트 &amp; Route를 등록해두고 실제로 불러와야할 컴포넌트에서 &lt;Outlet /&gt;으로 삽입해준다. function Dashboard() { return ( &lt;div&gt; &lt;h1&gt;Dashboard&lt;/h1&gt; {/* This element...","url": "http://localhost:4000/_posts/2022-09-02-react-study/"
+    "excerpt":"React Settings 초기 설치 CRA with typescript: npx create-react-app my-app –template typescript styled-components: npm i styled-components -&gt; npm i –save-dev @types/styled-components recoil: npm i recoil Router Router: 원하는 곳에 뿌려주는 용도. Nested Router 라우터 안의 라우터 웹사이트에서 탭을 사용할 때 도움이 된다. 섹션이 나눠졌을 때도 만들 수 있지. Outlet 활용:...","url": "http://localhost:4000/_posts/2022-09-02-react-study/"
   },{
     "title": "CSS grid layout",
     "excerpt":"Grid layout Flex와의 차이 Flex layout: 주축과 교차축으로 아이템을 정렬시키는 방식. 축이 기준이며 하나의 방향만 가지고 있다. 수평 또는 수직. 물론 기준 방향을 변경할 수 있으며 대부분의 레이아웃은 flex를 이용하여 만들어 낼 수 있다. Grid layout: 열과 행을 이용하여 아이템을 정렬시키는 방식. 열, 행이 기준이며 격자 무늬를 떠올리면 이해가 쉽다....","url": "http://localhost:4000/_posts/2022-09-06-css/"
   },{
     "title": "Recoil - React를 위한 상태관리 라이브러리",
     "excerpt":"Recoil Recoil library Global State: 어플리케이션이 특정 value에 접근해야 할 때 사용. 어떤 컴포넌트이든, 어떤 위치에 있든 특정 value에 접근하기 위해서는 global state상태여야 함. Recoil : global state management. 다른 스크린들, 다른 컴포넌트들이 같은 state에 접근해야 할 때. 그 state의 값을 공유하며 다른 작업이 진행된다면 이 값은 반드시 공유되어야 한다....","url": "http://localhost:4000/_posts/2022-09-11-recoil-react/"
+  },{
+    "title": "Drag and Drop with (rbd)",
+    "excerpt":"React beautiful dnd (rbd) RBD library RBD: 어플리케이션이 특정 value에 접근해야 할 때 사용. 어떤 컴포넌트이든, 어떤 위치에 있든 특정 value에 접근하기 위해서는 global state상태여야 함. Recoil : global state management. 다른 스크린들, 다른 컴포넌트들이 같은 state에 접근해야 할 때. 그 state의 값을 공유하며 다른 작업이 진행된다면 이 값은 반드시...","url": "http://localhost:4000/_posts/2022-09-24-react-beautiful-dnd/"
   },{
     "title": "About",
     "excerpt":"  ","url": "http://localhost:4000/about/"
@@ -64,6 +73,9 @@ var store = [{
   },{
     "title": "Posts by Tag",
     "excerpt":"","url": "http://localhost:4000/tags/"
+  },{
+    "title": null,
+    "excerpt":"","url": "http://localhost:4000/page2/"
   },{
     "title": null,
     "excerpt":"{% if page.xsl %} {% endif %} {% assign collections = site.collections | where_exp:'collection','collection.output != false' %}{% for collection in collections %}{% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}{% for doc in docs %} {{ doc.url | replace:'/index.html','/' | absolute_url | xml_escape }} {% if doc.last_modified_at or doc.date...","url": "http://localhost:4000/sitemap.xml"
