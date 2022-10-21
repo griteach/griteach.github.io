@@ -25,6 +25,10 @@
 <lastmod>2022-09-24T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/react/framer-motion/</loc>
+<lastmod>2022-10-18T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/_posts/2022-09-01-markdown-1/</loc>
 </url>
 <url>
@@ -41,6 +45,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/_posts/2022-09-24-react-beautiful-dnd/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/_posts/2022-10-18-framer-motion/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>

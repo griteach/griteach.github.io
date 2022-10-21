@@ -35,6 +35,12 @@ var store = [{
         "url": "/react/react-beautiful-dnd/",
         "teaser": null
       },{
+        "title": "Framer-motion",
+        "excerpt":"Framer-motion motion docs 소개 설치 motion 적용법 &lt;motion.div&gt;&lt;/motion.div&gt; motion을 통해서 불러와야 애니매이션을 적용할 수 있다. motion에 styled-components를 적용하려면 아래와 같이 해야한다. //일반 styled-components const Wrapper = styled.div` height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; `; //motion에 적용한 styled-components const Box = styled(motion.div)` width: 200px; height: 200px; display:...","categories": ["React"],
+        "tags": ["React","develop","study","motion","animation"],
+        "url": "/react/framer-motion/",
+        "teaser": null
+      },{
     "title": "마크다운 #1",
     "excerpt":"NOTICE 🔅 Notice: 기본적인 노티스 ⚡️ Primary: 중요한 노티스 🚦 Info: 정보 노티스 ⛔️ Warning: 경고 노티스 ❌ Danger: Danger 노티스 ✅ Success: Success 노티스 하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다. {: .notice--&lt;primary | info | warning | danger | success &gt;}...","url": "http://localhost:4000/_posts/2022-09-01-markdown-1/"
   },{
@@ -52,6 +58,9 @@ var store = [{
   },{
     "title": "Drag and Drop with (rbd)",
     "excerpt":"React beautiful dnd (rbd) RBD library RBD: 어플리케이션이 특정 value에 접근해야 할 때 사용. 어떤 컴포넌트이든, 어떤 위치에 있든 특정 value에 접근하기 위해서는 global state상태여야 함. Recoil : global state management. 다른 스크린들, 다른 컴포넌트들이 같은 state에 접근해야 할 때. 그 state의 값을 공유하며 다른 작업이 진행된다면 이 값은 반드시...","url": "http://localhost:4000/_posts/2022-09-24-react-beautiful-dnd/"
+  },{
+    "title": "Framer-motion",
+    "excerpt":"Framer-motion motion docs 소개 설치 motion 적용법 &lt;motion.div&gt;&lt;/motion.div&gt; motion을 통해서 불러와야 애니매이션을 적용할 수 있다. motion에 styled-components를 적용하려면 아래와 같이 해야한다. //일반 styled-components const Wrapper = styled.div` height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; `; //motion에 적용한 styled-components const Box = styled(motion.div)` width: 200px; height: 200px; display:...","url": "http://localhost:4000/_posts/2022-10-18-framer-motion/"
   },{
     "title": "About",
     "excerpt":"  ","url": "http://localhost:4000/about/"

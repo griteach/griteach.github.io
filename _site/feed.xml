@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T20:37:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">Drag and Drop with (rbd)</title><link href="http://localhost:4000/react/react-beautiful-dnd/" rel="alternate" type="text/html" title="Drag and Drop with (rbd)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/react/react-beautiful-dnd</id><content type="html" xml:base="http://localhost:4000/react/react-beautiful-dnd/"><![CDATA[<h1 id="react-beautiful-dnd-rbd">React beautiful dnd (rbd)</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-21T13:30:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Just do it</title><subtitle>기록.</subtitle><author><name>griteach</name><email>griteach22@gmail.com</email></author><entry><title type="html">Framer-motion</title><link href="http://localhost:4000/react/framer-motion/" rel="alternate" type="text/html" title="Framer-motion" /><published>2022-10-18T00:00:00+09:00</published><updated>2022-10-18T00:00:00+09:00</updated><id>http://localhost:4000/react/framer-motion</id><content type="html" xml:base="http://localhost:4000/react/framer-motion/"><![CDATA[<h1 id="framer-motion">Framer-motion</h1>
+
+<blockquote>
+  <p><a href="https://www.framer.com/docs/introduction/">motion docs</a></p>
+</blockquote>
+
+<h1 id="소개">소개</h1>
+
+<h1 id="설치">설치</h1>
+
+<h1 id="motion-적용법">motion 적용법</h1>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">motion</span><span class="p">.</span><span class="nx">div</span><span class="o">&gt;&lt;</span><span class="sr">/motion.div</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>motion을 통해서 불러와야 애니매이션을 적용할 수 있다.
+motion에 <code class="language-plaintext highlighter-rouge">styled-components</code>를 적용하려면 아래와 같이 해야한다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//일반 styled-components</span>
+<span class="kd">const</span> <span class="nx">Wrapper</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`</span><span class="p">;</span>
+
+<span class="c1">//motion에 적용한 styled-components</span>
+<span class="kd">const</span> <span class="nx">Box</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">(</span><span class="nx">motion</span><span class="p">.</span><span class="nx">div</span><span class="p">)</span><span class="s2">`
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+`</span><span class="p">;</span>
+
+<span class="o">&lt;</span><span class="nx">Wrapper</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">Box</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">boxVariants</span><span class="p">}</span> <span class="nx">initial</span><span class="o">=</span><span class="dl">"</span><span class="s2">start</span><span class="dl">"</span> <span class="nx">animate</span><span class="o">=</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/Box</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/Wrapper&gt;</span><span class="err">;
+</span></code></pre></div></div>
+
+<h1 id="details">Details</h1>
+
+<h2 id="기본사용법">기본사용법</h2>
+
+<p>프로퍼티를 넣어서 원하는 값을 입력해준다.
+initial : 원하는 초기 상태
+animate : 원하는 최종 상태
+transition : 그 트랜지션</p>
+
+<h2 id="variants">Variants</h2>
+
+<p class="notice--info"><strong>define:</strong><br />
+object를 사용해서 props들을 깔끔하게 정리해준다. object의 이름은 아무거나 상관없고, 안에 들어갈 props 이름도 상관없다. 다만,object에서 만든 이름을 그대로 motion에서 불러와야 한다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myVars</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">start</span><span class="p">:</span> <span class="p">{</span> <span class="na">scale</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+  <span class="na">end</span><span class="p">:</span> <span class="p">{</span> <span class="na">scale</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">rotateZ</span><span class="p">:</span> <span class="mi">360</span><span class="p">,</span> <span class="na">transition</span><span class="p">:</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">spring</span><span class="dl">"</span><span class="p">,</span> <span class="na">delay</span><span class="p">:</span> <span class="mf">0.5</span> <span class="p">}</span> <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Wrapper</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Box</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">myVars</span><span class="p">}</span> <span class="nx">initial</span><span class="o">=</span><span class="dl">"</span><span class="s2">start</span><span class="dl">"</span> <span class="nx">animate</span><span class="o">=</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/Wrapper</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>]]></content><author><name>griteach</name><email>griteach22@gmail.com</email></author><category term="React" /><category term="React" /><category term="develop" /><category term="study" /><category term="motion" /><category term="animation" /><summary type="html"><![CDATA[study #5]]></summary></entry><entry><title type="html">Drag and Drop with (rbd)</title><link href="http://localhost:4000/react/react-beautiful-dnd/" rel="alternate" type="text/html" title="Drag and Drop with (rbd)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/react/react-beautiful-dnd</id><content type="html" xml:base="http://localhost:4000/react/react-beautiful-dnd/"><![CDATA[<h1 id="react-beautiful-dnd-rbd">React beautiful dnd (rbd)</h1>
 
 <blockquote>
   <p><a href="https://www.npmjs.com/package/react-beautiful-dnd">RBD library</a></p>

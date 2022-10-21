@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>마크다운 #1 - Just do it</title>
-<meta name="description" content="+jekyll minimal-mistakes 세팅에 필요한 것들">
+<!-- begin _includes/seo.html --><title>Framer-motion - Just do it</title>
+<meta name="description" content="study #5">
 
 
   <meta name="author" content="griteach">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Just do it">
-<meta property="og:title" content="마크다운 #1">
-<meta property="og:url" content="http://localhost:4000/til/markdown-1/">
+<meta property="og:title" content="Framer-motion">
+<meta property="og:url" content="http://localhost:4000/react/framer-motion/">
 
 
-  <meta property="og:description" content="+jekyll minimal-mistakes 세팅에 필요한 것들">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-09-01T00:00:00+09:00">
+  <meta property="og:description" content="study #5">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-10-18T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/til/markdown-1/">
+
+<link rel="canonical" href="http://localhost:4000/react/framer-motion/">
 
 
 
@@ -280,16 +280,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="마크다운 #1">
-    <meta itemprop="description" content="+jekyll minimal-mistakes 세팅에 필요한 것들">
-    <meta itemprop="datePublished" content="2022-09-01T00:00:00+09:00">
+    <meta itemprop="headline" content="Framer-motion">
+    <meta itemprop="description" content="study #5">
+    <meta itemprop="datePublished" content="2022-10-18T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/til/markdown-1/" class="u-url" itemprop="url">마크다운 #1
+            <a href="http://localhost:4000/react/framer-motion/" class="u-url" itemprop="url">Framer-motion
 </a>
           </h1>
           
@@ -300,7 +300,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-09-01T00:00:00+09:00">2022-09-01</time>
+        <time datetime="2022-10-18T00:00:00+09:00">2022-10-18</time>
       </span>
     
 
@@ -313,7 +313,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          최대 1 분 소요
         
       </span>
     
@@ -328,157 +328,86 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-square"></i> 차례</h4></header>
-              <ul class="toc__menu"><li><a href="#notice">NOTICE</a></li><li><a href="#header">Header</a></li><li><a href="#yaml-front-matter">YAML front matter</a></li><li><a href="#code-block">Code block</a></li><li><a href="#blockquote">BlockQuote</a></li><li><a href="#ordered-list">Ordered List</a></li><li><a href="#unordered-list">Unordered List</a></li><li><a href="#image">Image</a></li><li><a href="#text-decoration">Text decoration</a></li><li><a href="#ref">Ref</a></li></ul>
+              <ul class="toc__menu"><li><a href="#framer-motion">Framer-motion</a></li><li><a href="#소개">소개</a></li><li><a href="#설치">설치</a></li><li><a href="#motion-적용법">motion 적용법</a></li><li><a href="#details">Details</a><ul><li><a href="#기본사용법">기본사용법</a></li><li><a href="#variants">Variants</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="notice">NOTICE</h1>
-
-<p class="notice"><strong>🔅 Notice:</strong><br />
-기본적인 노티스</p>
-
-<p class="notice--primary"><strong>⚡️ Primary:</strong><br />
-중요한 노티스</p>
-
-<p class="notice--info"><strong>🚦 Info:</strong><br />
-정보 노티스</p>
-
-<p class="notice--warning"><strong>⛔️ Warning:</strong><br />
-경고 노티스</p>
-
-<p class="notice--danger"><strong>❌ Danger:</strong><br />
-Danger 노티스</p>
-
-<p class="notice--success"><strong>✅ Success:</strong><br />
-Success 노티스</p>
-
-<p>하단의 중괄호를 이용해서 노티스 형태 알려주기. 아이콘은 직접 입력해 주는 방법밖에 없는 듯 하다.</p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .notice--<span class="nt">&lt;primary</span> <span class="err">|</span> <span class="na">info</span> <span class="err">|</span> <span class="na">warning</span> <span class="err">|</span> <span class="na">danger</span> <span class="err">|</span> <span class="na">success</span> <span class="nt">&gt;</span>}
-</code></pre></div></div>
-<p>위와 같이 알맞게 입력해 주자.</p>
-
-<p class="notice--info"><strong>개행 방법:</strong>
-개행을 원하는 위치에서 스페이스(공백) 두 번 + 엔터입력<br />
-또는, <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code> 태그 사용 가능.<br />br태그로 개행한 줄임.</p>
-
-<p class="notice--info"><strong>이모지 넣기:</strong><br />
-<code class="language-plaintext highlighter-rouge">cmd</code>+<code class="language-plaintext highlighter-rouge">ctrl</code>+<code class="language-plaintext highlighter-rouge">space bar</code>를 동시 또는 순차적으로 누르기. 이모티콘 선택창 등장.</p>
-
-<h1 id="header">Header</h1>
-
-<p class="notice--info"><strong>제목:</strong>
-제목은 # ~ ###### 까지 사용한다.</p>
-
-<h1 id="yaml-front-matter">YAML front matter</h1>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-title: "Markdown을 사용한 Post 작성 가이드"
-excerpt: "MD부터 YAML front Matter까지"
-date: 2022-09-01T15:34:30-04:00
-categories:
-  - Guide
-tags:
-  - Markdown
-toc : true
-toc_label: "=== Contents ==="
-toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
-toc_sticky: true
-classes: wide
----
-</code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">title</code>: 문서의 전체 제목을 나타냄.<br />
-<code class="language-plaintext highlighter-rouge">excerpt</code>: 문서를 간략하게 요약한 내용. 블로그 제목 아래에 보여줌.<br />
-<code class="language-plaintext highlighter-rouge">toc</code>: <code class="language-plaintext highlighter-rouge">true</code>로 설정하면 목차가 생성된다.<br />
-<code class="language-plaintext highlighter-rouge">toc_label</code>: 목차의 이름을 스트링으로 넣어줄 수 있다.<br />
-<code class="language-plaintext highlighter-rouge">classes</code>: <code class="language-plaintext highlighter-rouge">wide</code> 값을 주면 <code class="language-plaintext highlighter-rouge">toc</code>가 상단에 페이지 width만큼 자리를 차지. 여기를 삭제하면 우측에 작게 붙어있음.</p>
-
-<p class="notice--info"><strong>Front Matter Defaults:</strong><br />
-포스트마다 일일히 넣지 말고 한 번에 Defaults로 지정해서 사용하는 것이 더 좋아보인다. - in one shot.</p>
-
-<h1 id="code-block">Code block</h1>
-<p>이것 때문에 블로그 다시 만들게 되었음. 아주 사소한 생각에서 시작된 뻘짓은 이렇게 많은 공수를 필요로 하고… 그 덕에 블로그도 만들어보게 되었음. 역시 일단 해봐야 돼.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom/client</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
-
-
-<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span> <span class="k">as</span> <span class="nx">HTMLElement</span>
-<span class="p">);</span>
-<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
-  <span class="o">&lt;</span><span class="sr">/React.StrictMode</span><span class="err">&gt;
-</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h1 id="blockquote">BlockQuote</h1>
+        <h1 id="framer-motion">Framer-motion</h1>
 
 <blockquote>
-  <p>이것은 BlockQuote입니다.
-연이어 사용하면 이렇게 표현됩니다.</p>
-  <blockquote>
-    <p>꺽쇠를 두개 쓰면 이렇게 나옵니다.
-안쪽으로 넣을 수 있지요.</p>
-  </blockquote>
+  <p><a href="https://www.framer.com/docs/introduction/">motion docs</a></p>
 </blockquote>
 
-<blockquote>
-  <p>개행을 해서 인용구를 구분할 수 있습니다.</p>
-  <blockquote>
-    <p>역시 바로 들여쓰기 할 수 있구요.</p>
-  </blockquote>
-</blockquote>
+<h1 id="소개">소개</h1>
 
-<h1 id="ordered-list">Ordered List</h1>
-<ol>
-  <li>그냥 숫자를 붙이면 바로</li>
-  <li>순서가 있는 목록이 만들어 집니다.</li>
-  <li>이렇게요.</li>
-  <li>들여쓰기는 이렇게 하면 됩니다.</li>
-</ol>
+<h1 id="설치">설치</h1>
 
-<h1 id="unordered-list">Unordered List</h1>
-<ul>
-  <li>순서가 없는 목록</li>
-  <li>이렇게 만듭니다.</li>
-  <li>들여쓰기 하려면
-    <ul>
-      <li>이렇게? 탭을 이용하면 됩니다.</li>
-    </ul>
-  </li>
-</ul>
+<h1 id="motion-적용법">motion 적용법</h1>
 
-<h1 id="image">Image</h1>
-<p>이미지의 경우에는 느낌표를 사용합니다. 나머지는 링크와 동일합니다.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Alt Text](url)
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">motion</span><span class="p">.</span><span class="nx">div</span><span class="o">&gt;&lt;</span><span class="sr">/motion.div</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>motion을 통해서 불러와야 애니매이션을 적용할 수 있다.
+motion에 <code class="language-plaintext highlighter-rouge">styled-components</code>를 적용하려면 아래와 같이 해야한다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//일반 styled-components</span>
+<span class="kd">const</span> <span class="nx">Wrapper</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`</span><span class="p">;</span>
+
+<span class="c1">//motion에 적용한 styled-components</span>
+<span class="kd">const</span> <span class="nx">Box</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">(</span><span class="nx">motion</span><span class="p">.</span><span class="nx">div</span><span class="p">)</span><span class="s2">`
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+`</span><span class="p">;</span>
+
+<span class="o">&lt;</span><span class="nx">Wrapper</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">Box</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">boxVariants</span><span class="p">}</span> <span class="nx">initial</span><span class="o">=</span><span class="dl">"</span><span class="s2">start</span><span class="dl">"</span> <span class="nx">animate</span><span class="o">=</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">circleVariants</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/Box</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/Wrapper&gt;</span><span class="err">;
+</span></code></pre></div></div>
+
+<h1 id="details">Details</h1>
+
+<h2 id="기본사용법">기본사용법</h2>
+
+<p>프로퍼티를 넣어서 원하는 값을 입력해준다.
+initial : 원하는 초기 상태
+animate : 원하는 최종 상태
+transition : 그 트랜지션</p>
+
+<h2 id="variants">Variants</h2>
+
+<p class="notice--info"><strong>define:</strong><br />
+object를 사용해서 props들을 깔끔하게 정리해준다. object의 이름은 아무거나 상관없고, 안에 들어갈 props 이름도 상관없다. 다만,object에서 만든 이름을 그대로 motion에서 불러와야 한다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myVars</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">start</span><span class="p">:</span> <span class="p">{</span> <span class="na">scale</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+  <span class="na">end</span><span class="p">:</span> <span class="p">{</span> <span class="na">scale</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">rotateZ</span><span class="p">:</span> <span class="mi">360</span><span class="p">,</span> <span class="na">transition</span><span class="p">:</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">spring</span><span class="dl">"</span><span class="p">,</span> <span class="na">delay</span><span class="p">:</span> <span class="mf">0.5</span> <span class="p">}</span> <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Wrapper</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Box</span> <span class="nx">variants</span><span class="o">=</span><span class="p">{</span><span class="nx">myVars</span><span class="p">}</span> <span class="nx">initial</span><span class="o">=</span><span class="dl">"</span><span class="s2">start</span><span class="dl">"</span> <span class="nx">animate</span><span class="o">=</span><span class="dl">"</span><span class="s2">end</span><span class="dl">"</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/Wrapper</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
-
-<p><img src="/assets/images/griteach_logo_circle.png" alt="Image" /></p>
-
-<h1 id="text-decoration">Text decoration</h1>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*single asterisks*
-_single underscores_
-**double asterisks**
-__double underscores__
-~~cancelline~~
-</code></pre></div></div>
-<p><em>single asterisks</em><br />
-<em>single underscores</em><br />
-<strong>double asterisks</strong><br />
-<strong>double underscores</strong><br />
-<del>cancelline</del></p>
-
-<h1 id="ref">Ref</h1>
-
-<blockquote>
-  <p>Markdown을 사용한 Post 작성 가이드 : <a href="https://niklasjang.github.io/guide/how-to-use-markdown/#notice">NiklasJang’s Blog</a>
-YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_components">Wikipedia - YAML</a></p>
-</blockquote>
-
 
         
       </section>
@@ -495,7 +424,15 @@ YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_component
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#markdown" class="page__taxonomy-item p-category" rel="tag">markdown</a>
+      <a href="/tags/#animation" class="page__taxonomy-item p-category" rel="tag">animation</a><span class="sep">, </span>
+    
+      <a href="/tags/#develop" class="page__taxonomy-item p-category" rel="tag">develop</a><span class="sep">, </span>
+    
+      <a href="/tags/#motion" class="page__taxonomy-item p-category" rel="tag">motion</a><span class="sep">, </span>
+    
+      <a href="/tags/#react" class="page__taxonomy-item p-category" rel="tag">React</a><span class="sep">, </span>
+    
+      <a href="/tags/#study" class="page__taxonomy-item p-category" rel="tag">study</a>
     
     </span>
   </p>
@@ -512,7 +449,7 @@ YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_component
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
+      <a href="/categories/#react" class="page__taxonomy-item p-category" rel="tag">React</a>
     
     </span>
   </p>
@@ -520,7 +457,7 @@ YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_component
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-01T00:00:00+09:00">2022-09-01</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-10-18T00:00:00+09:00">2022-10-18</time></p>
 
       </footer>
 
@@ -529,22 +466,22 @@ YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_component
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4+%231%20http%3A%2F%2Flocalhost%3A4000%2Ftil%2Fmarkdown-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Framer-motion%20http%3A%2F%2Flocalhost%3A4000%2Freact%2Fframer-motion%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftil%2Fmarkdown-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Freact%2Fframer-motion%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftil%2Fmarkdown-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Freact%2Fframer-motion%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">이전</a>
+      <a href="/react/react-beautiful-dnd/" class="pagination--pager" title="Drag and Drop with (rbd)
+">이전</a>
     
     
-      <a href="/goal/life/" class="pagination--pager" title="목표
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -558,53 +495,6 @@ YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_component
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/react/framer-motion/" rel="permalink">Framer-motion
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2022-10-18T00:00:00+09:00">2022-10-18</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">study #5
-</p>
-  </article>
-</div>
-
         
           
 
@@ -742,6 +632,53 @@ YAML 기본 문법 : <a href="https://en.wikipedia.org/wiki/YAML#Basic_component
 
 
     <p class="archive__item-excerpt" itemprop="description">study #2
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react/react-study/" rel="permalink">React basic
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-09-02T00:00:00+09:00">2022-09-02</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          8 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">study #1
 </p>
   </article>
 </div>
