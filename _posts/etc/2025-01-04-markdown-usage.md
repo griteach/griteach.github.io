@@ -1,5 +1,5 @@
 ---
-title: Markdown 사용법
+title: Jekyll & Markdown 사용법
 date: 2025-01-04 10:26:00 +0900
 categories: [Markdown]
 tags: [markdown]     # TAG names should always be lowercase
