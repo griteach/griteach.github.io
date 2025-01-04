@@ -274,13 +274,8 @@ public class BootSpringBootApplication {
 // code
 Link: [Google][googlelink]
 
-[googlelink]: https://google.com "Go google"
+
 ```
-
-Link: [Google][googlelink]
-
-[googlelink]: https://google.com "Go google"
-
 * 외부링크
 ```
 사용문법: [Title](link)
@@ -292,8 +287,6 @@ Link: [Google](https://google.com, "google link")
 ```
 일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다.
 
-* 외부링크: <https://example.com/>
-* 이메일링크: <address@example.com>
 ```
 
 * 외부링크: <https://example.com/>
@@ -323,8 +316,7 @@ __double underscores__
 ![Alt text](/path/to/img.jpg)
 ![Alt text](/path/to/img.jpg "Optional title")
 ```
-![석촌호수 러버덕](https://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0)
-![석촌호수 러버덕](https://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 "RubberDuck")
+
 
 사이즈 조절 기능은 없기 때문에 ```<img width="" height=""></img>```를 이용한다.
 
@@ -334,8 +326,7 @@ __double underscores__
 <img src="/path/to/img.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 ```
 
-<img src="https://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
-<img src="https://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
+
 
 ## Line Break
 3칸 이상 띄어쓰기(` `)를 하면 줄이 바뀐다.
