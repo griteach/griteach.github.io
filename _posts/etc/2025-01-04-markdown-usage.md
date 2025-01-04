@@ -60,13 +60,6 @@ Markdown은 텍스트 기반의 마크업 언어로, 쉽게 쓰고 읽을 수 �
 ##### This is a H5
 ###### This is a H6
 ```
-# This is a H1
-## This is a H2
-### This is a H3
-#### This is a H4
-##### This is a H5
-###### This is a H6
-####### This is a H7(지원하지 않음)
 
 ## BlockQuote
 이메일에서 사용하는 ```>``` 블럭인용문자를 이용한다.
@@ -87,7 +80,7 @@ Markdown은 텍스트 기반의 마크업 언어로, 쉽게 쓰고 읽을 수 �
 >	```
 
 ## List
-### ● Ordered List
+### Ordered List
 순서있는 목록은 숫자와 점을 사용한다.
 ```
 1. 첫번째
@@ -110,7 +103,7 @@ Markdown은 텍스트 기반의 마크업 언어로, 쉽게 쓰고 읽을 수 �
 
 딱히 개선될 것 같지는 않다. 존 그루버가 신경안쓰고 있다고...
 
-### ● Unordered List
+### Unordered List
 ```
 * 빨강
   * 녹색
