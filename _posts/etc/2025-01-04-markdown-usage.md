@@ -10,6 +10,34 @@ tags: [markdown]     # TAG names should always be lowercase
 Markdown은 텍스트 기반의 마크업 언어로, 쉽게 쓰고 읽을 수 있으며 웹에서도 보다 빠르게 쓰고 읽을 수 있는 마크업 언어이다. 특히, 컨텐츠에 집중할 수 있도록 편집의 수고를 덜어준 점이 마음에 든다. 
 
 # 문법
+## Callout
+
+> This is an example of a Tip.
+{: .prompt-tip }
+
+> This is an example of an Info block.
+{: .prompt-info }
+
+> This is an example of a Warning block.
+{: .prompt-warning }
+
+> This is an example of a Danger block.
+{: .prompt-danger }
+
+```
+> This is an example of a Tip.
+{: .prompt-tip }
+
+> This is an example of an Info block.
+{: .prompt-info }
+
+> This is an example of a Warning block.
+{: .prompt-warning }
+
+> This is an example of a Danger block.
+{: .prompt-danger }
+```
+
 ## Headers
 * 큰제목: 문서 제목
     ```
