@@ -311,21 +311,6 @@ __double underscores__
 > 문장 중간에 사용할 경우에는 띄어쓰기를 사용하는 것이 좋다.
 
 
-## Image
-```
-![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg "Optional title")
-```
-
-
-사이즈 조절 기능은 없기 때문에 ```<img width="" height=""></img>```를 이용한다.
-
-예
-```
-<img src="/path/to/img.jpg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
-<img src="/path/to/img.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
-```
-
 
 
 ## Line Break
@@ -346,4 +331,4 @@ __double underscores__
 
 
 # Reference
-- [Markdown 사용법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+- [Markdown 사용법 출처](https://gist.github.com/ihoneymon/652be052a0727ad59601)
